@@ -1,0 +1,43 @@
+https://github.com/skolchin/gbr
+
+Go board image recognition (GBR)
+This project is aiming to create a program which will be able to analyse a image of a Go game board in order to determine board parameters and stone positions.
+
+The project is build on wonderfull OpenCV library.
+
+A lot of ideas and algorithms were found on excellent Adrian Rosebrock's PyImageSearch site and borrowed from thematical Slashdot threads.
+
+The algorithm per se is the following:
+
+Detect board properties (board edges, spacing and board size):
+
+Transform image using 4-points transformation
+Set area to be recognized
+If parameters set - run HoughLinesP to determine line segments, filter out small lines and reconstruct the image, allowing to remove board labels (this step seems obsolete, currently its easier to apply area mask excluding labels)
+Run HoughLines to find all the lines across the board
+Separate lines to vertical/horizontal ones
+Remove duplicates and lines too close to each other
+Calculate board edges as minimum and maximum coordinates of horizontal/vertical lines
+Detect a board size as number of horizontal/vertical lines found.
+Find stones (black and white):
+
+Apply pre-filters with parameters specified through the interface
+Run HoughCircles to detect circles and convert found X,Y coordinates to board position
+Apply post-filters to tune stone radius
+Eliminate duplicates where black and white stones occupy the same board position
+
+Currently, the following filters are implemented:
+
+Channel splitting (red channel is used in white stone detections, blue - in black one)
+Thresholding
+Dilating
+Eroding
+Blur
+Pyramid mean filtering (useful when stones have textured faces or extensive glare)
+Luminosity equalization using CLAHE
+Watershed (post-filter).
+Filter and board detection parameters can be changed through the interface and automatically saved to a property file (.GPAR). The property file is loaded automatically when an image is loaded for processing.
+
+Recognised boards can be saved to an SGF file. The program creates standard SGF file, but, obviously, it cannot reproduce an actual game flow and just saves stones one by one.
+
+Please note that this is not an AI system, but a "good old" algorythmic program. I couldn't manage to build an AI due to lack of time and compexity of the task, so it relies on computer vision algorithms to do the job. In particular, this means that correct board recognition is highly dependent on correct parameters set by end user, so even small changes could improve or reduce results.

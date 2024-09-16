@@ -1,0 +1,11 @@
+query_task:
+  description: >
+    Construct and run SQL query to answer {question}
+  expected_output: >
+    Output of the SQL query
+
+story_task:
+  description: >
+    Write short story to answer {question}
+  expected_output: >
+    Text output

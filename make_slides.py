@@ -16,9 +16,9 @@ from ppt import create_presentation
 from typing import Any
 
 load_dotenv()
-# set_llm_cache(SQLiteCache(database_path=".langchain.db"))
+set_llm_cache(SQLiteCache(database_path=".langchain.db"))
 
-# llm = OllamaLLM(model="llama3.1")
+# llm = OllamaLLM(model="mistral-nemo")
 
 llm = HuggingFaceEndpoint(
     repo_id="mistralai/Mistral-Nemo-Instruct-2407",
@@ -81,7 +81,7 @@ def tool_json_to_ppt(content: str | dict | list) -> str:
 
 tool_json_to_ppt.result_as_answer = True
 
-with open('sample_content.txt', 'rt') as fp:
+with open('./data/sample_content.txt', 'rt') as fp:
     content = fp.read()
 
 SYS_PROMPT = '''Create powerpoint presentation file based on of {user_input}.'''
@@ -133,7 +133,7 @@ agent_writer = crewai.Agent(
         the tool will return an error. If such an error is returned, recreate JSON objects, validate them, 
         and try again.
 
-        Don't output explanation. Output language must be Russian.
+        Don't output explanation. 
     ''',
     tools=[tool_validate_json, tool_json_to_ppt],
     max_iter=100,
@@ -145,6 +145,17 @@ task_writer = crewai.Task(
     agent=agent_writer,
     expected_output='''Powerpoint presentation file name''')
 
-crew = crewai.Crew(agents=[agent_writer], tasks=[task_writer], verbose=False)
+crew = crewai.Crew(
+    agents=[agent_writer], 
+    tasks=[task_writer],
+    memory=True,
+    verbose=True,
+    embedder={
+        "provider": "ollama",
+        "config":{
+            "model": 'mistral-nemo',
+        }
+    })
+
 res = crew.kickoff(inputs={"user_input": content})
 print(f'Results: {res}')

@@ -1,5 +1,3 @@
-https://github.com/skolchin/gbr
-
 Go board image recognition (GBR)
 This project is aiming to create a program which will be able to analyse a image of a Go game board in order to determine board parameters and stone positions.
 

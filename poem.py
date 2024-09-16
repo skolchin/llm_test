@@ -17,7 +17,8 @@ template = """
     Answer: Let's think step by step
 """
 
-llm = Ollama(model="llama3.1")
+llm = Ollama(model="mistral-nemo")
+
 # llm = HuggingFaceEndpoint(
 #     repo_id="mistralai/Mistral-Nemo-Instruct-2407",
 #     temperature=0.5,

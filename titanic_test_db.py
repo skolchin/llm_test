@@ -17,18 +17,18 @@ from langchain_community.tools.sql_database.tool import (
 )
 
 load_dotenv()
-# set_llm_cache(SQLiteCache(database_path=".langchain.db"))
+set_llm_cache(SQLiteCache(database_path=".langchain.db"))
 
 db = SQLDatabase.from_uri("sqlite:///titanic.db")
 
 # sudo systemctl start ollama
-# llm = Ollama(model="llama3.1")
+llm = Ollama(model="mistral-nemo")
 
-llm = HuggingFaceEndpoint(
-    repo_id="mistralai/Mistral-Nemo-Instruct-2407",
-    huggingfacehub_api_token=os.environ['HUGGINGFACE_API_KEY'],
-    temperature=0.35,
-)
+# llm = HuggingFaceEndpoint(
+#     repo_id="mistralai/Mistral-Nemo-Instruct-2407",
+#     huggingfacehub_api_token=os.environ['HUGGINGFACE_API_KEY'],
+#     temperature=0.35,
+# )
 
 # https://build.nvidia.com/meta/llama-3_1-405b-instruct
 # llm = ChatNVIDIA(
@@ -45,35 +45,35 @@ USER_PROMPT = '''
 '''
 
 ## Tools
-@tool("tool_tables")
-def tool_tables() -> list:
+@tool
+def tool_tables() -> str:
     """ Get all the tables in the database """
     x = ListSQLDatabaseTool(db=db).invoke("")
-    return [x]
+    return x
 
-@tool("tool_schema")
-def tool_schema(tables: str | dict | list) -> str:
+@tool
+def tool_schema(tables: str) -> str:
     """Get table schema """
     tool = InfoSQLDatabaseTool(db=db)
-    match tables:
-        case str() | list():
-            x = tool.invoke(tables)
-            return x
-        case 'dict':
-            keys = [k for k in ['value', 'table_name', 'name'] if k in tables]
-            assert keys
-            x = tool.invoke(tables[k])
-            return x
+    x = tool.invoke(tables)
+    return x
 
-@tool("tool_query")
+@tool
 def tool_query(sql: str) -> str:
     """ Execute an SQL query """
-    return QuerySQLDataBaseTool(db=db).invoke(sql)
+    x = QuerySQLDataBaseTool(db=db).invoke(sql)
+    return x
 
-@tool("tool_check")
+@tool
 def tool_check(sql: str) -> str:
     """ Check SQL validity """
-    return QuerySQLCheckerTool(db=db, llm=llm).invoke({"query":sql})
+    # x = QuerySQLCheckerTool(db=db, llm=llm).invoke({"query":sql})
+    # return x
+    try:
+        QuerySQLDataBaseTool(db=db).invoke(sql)
+        return 'ok'
+    except Exception as ex:
+        return f'Error: {ex}'
 
 
 # SQL
@@ -84,11 +84,13 @@ agent_sql = crewai.Agent(
     goal=SYS_PROMPT_SQL,
     backstory='''
         You are an agent designed to interact with a SQL database.
-        Given an input question, create a syntactically correct SQL query to run, then look at the results of the query and return the answer.
+        Given an input question, create a syntactically correct SQL query, 
+        then run this query, look at the results of the query and return the answer.
 
         Only use the below tools. Only use the information returned by the below tools to construct your final answer.
         If you get an error while executing a query, rewrite the query and try again.
 
+        Double check SQL query before execution. 
         DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the database.
 
         If the question does not seem related to the database, just return "I don't know" as the answer.
@@ -102,7 +104,7 @@ agent_sql = crewai.Agent(
         Be sure that the table actually exist by calling 'tool_tables' first!.
         Example Input: 'table1'
 
-        Use the `tool_check` to review your queries before executing.
+        Use the `tool_check` to double check your queries before executing.
         If the query is not correct, an error message will be returned. 
         If an error is returned, rewrite the query, check the query, and try again. 
 
@@ -141,7 +143,8 @@ agent_writer = crewai.Agent(
      ''',
     max_iter=100,
     llm=llm,
-    allow_delegation=False, verbose=True)
+    allow_delegation=False, 
+    verbose=True)
 
 ## Task
 task_writer = crewai.Task(
@@ -150,6 +153,18 @@ task_writer = crewai.Task(
     context=[task_sql],
     expected_output='''Text output''')
 
-crew = crewai.Crew(agents=[agent_sql, agent_writer], tasks=[task_sql, task_writer], verbose=False)
+crew = crewai.Crew(
+    agents=[agent_sql, agent_writer], 
+    tasks=[task_sql, task_writer], 
+    memory=True,
+    verbose=False,
+    embedder={
+        "provider": "ollama",
+        "config":{
+            "model": 'llama3.1',
+        }
+    }
+)
+
 res = crew.kickoff(inputs={"user_input": USER_PROMPT})
 print(f'Results: {res}')

@@ -10,4 +10,4 @@ langchain_nvidia_ai_endpoints   # api key: https://build.nvidia.com/meta/llama-3
 langchain_huggingface
 crewai
 crewai_tools
-gpt4all
+python-pptx

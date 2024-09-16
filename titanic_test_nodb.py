@@ -1,8 +1,4 @@
 # Test LLM
-#
-# Based on article
-# "Build a Data Scientist AI that can query db with SQL, analyze data with Python, write reports with HTML, and do Machine Learning (No GPU, No APIKEY)"
-# by Mauro Di Pietro on TDS
 
 import os
 from dotenv import load_dotenv

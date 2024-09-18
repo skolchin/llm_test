@@ -47,7 +47,8 @@ def _add_slide(ppt: Presentation, slide: Mapping):
                     tmp_img_path = download_file(img_path)
                     ppt_slide.shapes.add_picture(tmp_img_path, left, top, height=height)
                     cur_left += 1
-                except requests.HTTPError:
+                except requests.HTTPError as ex:
+                    print(f'Cannot download image {img_path}')
                     pass
 
 def _add_title_slide(ppt: Presentation, slide: Mapping):
@@ -65,6 +66,7 @@ def create_presentation(slides: Sequence, file_name: str | None = None) -> str:
 
     if not file_name:
         file_name = slides[0].get("title_text").lower().replace(",", "").replace(" ", "-") + '.ppt'
+        file_name = './out/' + file_name
 
     ppt = Presentation()
     _add_title_slide(ppt, slides[0])

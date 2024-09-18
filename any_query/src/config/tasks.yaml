@@ -1,0 +1,5 @@
+query_task:
+  description: >
+    Construct and run SQL query to answer {question}
+  expected_output: >
+    Output of the SQL query or word "Unknown" if there's no valid results

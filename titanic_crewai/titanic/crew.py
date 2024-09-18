@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
-from langchain_community.llms import Ollama
+from functools import cached_property
+from langchain_ollama.llms import OllamaLLM
 from crewai import Agent, Crew, Process, Task
 from langchain_huggingface import HuggingFaceEndpoint
 from crewai.project import CrewBase, agent, crew, task, llm
@@ -13,17 +14,29 @@ load_dotenv()
 class TitanicCrew:
     agents_config = './config/agents.yaml'
     tasks_config = './config/tasks.yaml'
-    
+
+    @cached_property
+    def database(self) -> SQLDatabase:
+        db_file = os.path.abspath(self.agents_config['data_analyst']['database'])
+        assert os.path.exists(db_file), f'Database {db_file} does not exist'
+
+        print(f'Using {db_file} database')
+        return SQLDatabase.from_uri(f"sqlite:///{db_file}")
+
     @llm
     def llama_llm(self):
-        return Ollama(model="llama3.1")
+        return OllamaLLM(model="llama3.1")
 
     @llm
     def mistral_llm(self):
-        return Ollama(model="mistral-nemo")
+        return OllamaLLM(model="mistral-nemo", temperature=0.6, top_k=10, top_p=0.5)
 
     @llm
-    def hf_mistral_llm(self):
+    def command_r_llm(self):
+        return OllamaLLM(model="command-r")
+    
+    @llm
+    def cloud_mistral_llm(self):
         return HuggingFaceEndpoint(
             repo_id="mistralai/Mistral-Nemo-Instruct-2407",
             huggingfacehub_api_token=os.environ['HUGGINGFACE_API_KEY'],
@@ -32,13 +45,7 @@ class TitanicCrew:
 
     @agent
     def agent_sql(self) -> Agent:
-        db_file = os.path.abspath(self.agents_config['data_analyst']['database'])
-        assert os.path.exists(db_file), f'Database {db_file} does not exist'
-
-        print(f'Using {db_file} database')
-        db = SQLDatabase.from_uri(f"sqlite:///{db_file}")
-        toolkit = SQLDatabaseToolkit(db=db, llm=self.agents_config['data_analyst']['llm'])
-
+        toolkit = SQLDatabaseToolkit(db=self.database, llm=self.agents_config['data_analyst']['llm'])
         return Agent(
             config=self.agents_config['data_analyst'],
             tools=toolkit.get_tools(),
@@ -54,7 +61,7 @@ class TitanicCrew:
 
     @crew
     def crew(self) -> Crew:
-        """ Creates the crea """
+        """ Creates the crew """
         return Crew(
             agents=self.agents,  
             tasks=self.tasks, 

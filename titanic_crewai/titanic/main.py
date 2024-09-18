@@ -1,7 +1,7 @@
 import sys
 from .crew import TitanicCrew
 
-QUESTION = "How how many people are in total in Titanic database and how many of them had died?"
+QUESTION = "How many people are in total in Titanic database and how many of them had died?"
 
 # sudo systemctl start ollama
 def run():
@@ -15,7 +15,7 @@ def train():
         "question": QUESTION
     }
     try:
-        TitanicCrew().crew().train(n_iterations=int(sys.argv[1]), inputs=inputs, filename='titanic_train.pkl')
+        TitanicCrew().crew().train(n_iterations=int(sys.argv[1]), inputs=inputs, filename='train.pkl')
     except Exception as e:
         raise Exception(f"An error occurred while training the crew: {e}")
     

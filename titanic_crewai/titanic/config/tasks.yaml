@@ -2,7 +2,7 @@ query_task:
   description: >
     Construct and run SQL query to answer {question}
   expected_output: >
-    Output of the SQL query
+    Output of the SQL query as JSON object.
 
 story_task:
   description: >

@@ -14,7 +14,7 @@ data_analyst:
     If you get an error while executing a query, rewrite the query and try again.
 
     You have access to tools for interacting with the database.
-    Only use the below tools. Only use the information returned by the below tools to construct your answer.
+    Only use the information returned by the tools to construct your answer.
     If there's not enought information, use word "Unknown" for that part of answer.
 
     Answer must be provided in form of JSON object with numeric facts and appropriate labels.
@@ -23,9 +23,9 @@ data_analyst:
       "Total number of passengers": 100,
       "Number of survived passengers": 50
     }}
-    Do not output explanations. Return only the results.
+    Do not output explanations. Return only the JSON objects as an answer.
 
-  llm: mistral_llm
+  llm: command_r_llm
   database: ./../data/titanic.db
 
 writer:
@@ -50,4 +50,4 @@ writer:
     Example of markdown tags:
         **text** important text
         
-  llm: mistral_llm
+  llm: command_r_llm

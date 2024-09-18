@@ -1,5 +1,5 @@
 pandas
-# psycopg2-binary
+psycopg2-binary
 openpyxl
 python-dotenv
 langchain_core
@@ -11,3 +11,4 @@ langchain_huggingface
 crewai
 crewai_tools
 python-pptx
+langgraph

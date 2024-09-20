@@ -1,10 +1,7 @@
 import sys
 from .crew import AnyQueryCrew
 
-# QUESTION = "How many records is in 'dbeis_smcntry' table are not for Russia?"
-# QUESTION = "Сколько записей в таблице 'dbeis_smcntry' относятся к России? Ответ должен быть на русском языке"
-# QUESTION = "How many records in 'dbps21_aadoc' table belongs to document type 'AAA'?"
-QUESTION = "What summary amount from 'dbps21_aadoc' table belongs to document type 'AAA'?"
+QUESTION = "Сколько записей в таблице 'transl_budget' относятся к первой версии бюджета?"
 
 # sudo systemctl start ollama
 def run():

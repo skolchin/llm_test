@@ -25,7 +25,7 @@ data_analyst:
     }}
     Do not output explanations. Return only the JSON objects as an answer.
 
-  llm: command_r_llm
+  llm: cloud_mistral_llm
   database: ./../data/titanic.db
 
 writer:

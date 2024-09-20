@@ -1,3 +1,4 @@
+# sudo systemctl start ollama
 from langchain_ollama import ChatOllama
 from langgraph.prebuilt import create_react_agent
 from langchain_community.document_loaders import TextLoader
@@ -34,7 +35,6 @@ json_mesage = """
         "id": 3, 
         title_text": "Slide 2 Title", 
         "text": ["Bullet 1", "Bullet 2", "Bullet 3"],
-        "img_path": ["Illustration 1.png", "Illustration 2.png"]
     }}
     Double check that JSON objects are correct and valid.
     Do not output explanations, return only JSON content.

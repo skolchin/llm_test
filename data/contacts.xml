@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='utf-8'?>
+<contact_list>
+  <person>
+    <full_name>Ситникова Ия Даниловна</full_name>
+    <phone>8 (740) 532-9304</phone>
+    <job_title>Старший специалист</job_title>
+    <department>Бухгалтерия</department>
+  </person>
+  <person>
+    <full_name>Корнил Харлампович Егоров</full_name>
+    <phone>+7 057 988 9616</phone>
+    <job_title>Специалист</job_title>
+    <department>IT support</department>
+  </person>
+  <person>
+    <full_name>Матвеева Нина Станиславовна</full_name>
+    <phone>80038655756</phone>
+    <job_title>Специалист</job_title>
+    <department>Бухгалтерия</department>
+  </person>
+  <person>
+    <full_name>тов. Афанасьева Ангелина Макаровна</full_name>
+    <phone>8 (885) 763-8801</phone>
+    <job_title>Начальник отдела</job_title>
+    <department>IT support</department>
+  </person>
+  <person>
+    <full_name>Андрон Измаилович Субботин</full_name>
+    <phone>8 (415) 942-5803</phone>
+    <job_title>Директор</job_title>
+    <department>Столовая</department>
+  </person>
+  <person>
+    <full_name>Эмилия Рудольфовна Тарасова</full_name>
+    <phone>8 (674) 940-06-08</phone>
+    <job_title>Директор</job_title>
+    <department>IT support</department>
+  </person>
+  <person>
+    <full_name>Мартын Фадеевич Калашников</full_name>
+    <phone>85434457234</phone>
+    <job_title>Специалист</job_title>
+    <department>Бухгалтерия</department>
+  </person>
+  <person>
+    <full_name>Октябрина Ждановна Соболева</full_name>
+    <phone>85266743317</phone>
+    <job_title>Начальник отдела</job_title>
+    <department>IT support</department>
+  </person>
+  <person>
+    <full_name>Викентий Викентьевич Потапов</full_name>
+    <phone>8 (524) 480-97-73</phone>
+    <job_title>Начальник отдела</job_title>
+    <department>Столовая</department>
+  </person>
+  <person>
+    <full_name>Комиссарова Василиса Ждановна</full_name>
+    <phone>87086108460</phone>
+    <job_title>Старший специалист</job_title>
+    <department>IT support</department>
+  </person>
+  <person>
+    <full_name>Аскольд Трифонович Русаков</full_name>
+    <phone>8 988 077 45 86</phone>
+    <job_title>Начальник отдела</job_title>
+    <department>Бухгалтерия</department>
+  </person>
+  <person>
+    <full_name>Майя Максимовна Крюкова</full_name>
+    <phone>8 (388) 720-31-76</phone>
+    <job_title>Специалист</job_title>
+    <department>IT support</department>
+  </person>
+  <person>
+    <full_name>Валерия Юрьевна Большакова</full_name>
+    <phone>+7 (574) 230-21-37</phone>
+    <job_title>Старший специалист</job_title>
+    <department>Бухгалтерия</department>
+  </person>
+  <person>
+    <full_name>тов. Кузьмина Иванна Вадимовна</full_name>
+    <phone>8 (576) 951-47-18</phone>
+    <job_title>Специалист</job_title>
+    <department>Бухгалтерия</department>
+  </person>
+  <person>
+    <full_name>Элеонора Николаевна Дмитриева</full_name>
+    <phone>84466531329</phone>
+    <job_title>Начальник отдела</job_title>
+    <department>IT support</department>
+  </person>
+  <person>
+    <full_name>Андроник Теймуразович Королев</full_name>
+    <phone>8 781 247 16 27</phone>
+    <job_title>Старший специалист</job_title>
+    <department>IT support</department>
+  </person>
+  <person>
+    <full_name>Фёкла Болеславовна Шашкова</full_name>
+    <phone>+75010157755</phone>
+    <job_title>Специалист</job_title>
+    <department>Столовая</department>
+  </person>
+  <person>
+    <full_name>Майя Наумовна Семенова</full_name>
+    <phone>84249824714</phone>
+    <job_title>Старший специалист</job_title>
+    <department>Бухгалтерия</department>
+  </person>
+  <person>
+    <full_name>Станимир Ануфриевич Медведев</full_name>
+    <phone>87566541144</phone>
+    <job_title>Специалист</job_title>
+    <department>IT support</department>
+  </person>
+  <person>
+    <full_name>Сысоев Милен Харитонович</full_name>
+    <phone>8 674 144 3941</phone>
+    <job_title>Старший специалист</job_title>
+    <department>Столовая</department>
+  </person>
+  <person>
+    <full_name>Иванов Назар Игнатьевич</full_name>
+    <phone>+7 949 429 0083</phone>
+    <job_title>Специалист</job_title>
+    <department>Столовая</department>
+  </person>
+  <person>
+    <full_name>Лидия Кузьминична Бирюкова</full_name>
+    <phone>+7 731 549 16 12</phone>
+    <job_title>Специалист</job_title>
+    <department>Бухгалтерия</department>
+  </person>
+  <person>
+    <full_name>Зиновьева София Андреевна</full_name>
+    <phone>88471744029</phone>
+    <job_title>Директор</job_title>
+    <department>Столовая</department>
+  </person>
+  <person>
+    <full_name>Милица Ивановна Кудряшова</full_name>
+    <phone>+7 (802) 926-03-55</phone>
+    <job_title>Старший специалист</job_title>
+    <department>Бухгалтерия</department>
+  </person>
+  <person>
+    <full_name>Королева Александра Анатольевна</full_name>
+    <phone>+7 (894) 123-2053</phone>
+    <job_title>Старший специалист</job_title>
+    <department>Столовая</department>
+  </person>
+  <person>
+    <full_name>Никита Ильич Виноградов</full_name>
+    <phone>83428789184</phone>
+    <job_title>Специалист</job_title>
+    <department>Столовая</department>
+  </person>
+  <person>
+    <full_name>Филипп Эдгардович Макаров</full_name>
+    <phone>+7 011 696 11 92</phone>
+    <job_title>Начальник отдела</job_title>
+    <department>IT support</department>
+  </person>
+  <person>
+    <full_name>Тихонов Евстигней Игнатьевич</full_name>
+    <phone>8 563 116 6658</phone>
+    <job_title>Специалист</job_title>
+    <department>IT support</department>
+  </person>
+  <person>
+    <full_name>Леон Вячеславович Афанасьев</full_name>
+    <phone>8 (981) 380-2921</phone>
+    <job_title>Старший специалист</job_title>
+    <department>IT support</department>
+  </person>
+  <person>
+    <full_name>Парамон Филатович Тарасов</full_name>
+    <phone>8 (546) 870-16-21</phone>
+    <job_title>Специалист</job_title>
+    <department>Столовая</department>
+  </person>
+</contact_list>

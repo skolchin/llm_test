@@ -1,8 +1,8 @@
 # Prepare Titanic SQLite database from titanic dataset
 # Dataset source: https://www.kaggle.com/datasets/vinicius150987/titanic3
 
-import pandas as pd
 import sqlite3
+import pandas as pd
 
 df = pd.read_csv("./data/titanic.csv", sep=';')
 print(df)

@@ -1,20 +1,33 @@
+# common
+click
+faker
 pandas
 psycopg2-binary
 openpyxl
-faker
+python-pptx
 python-dotenv
+
+# streamlit
+streamlit
+streamlit-tree-select
+
+# crewai
+crewai
+crewai_tools
+
+# langgraph + langchain
+langgraph
 langchain_core
 langchain-community
 langchain_experimental
 langchain-ollama                # install: curl -fsSL https://ollama.com/install.sh | sh
 langchain_nvidia_ai_endpoints   # api key: https://build.nvidia.com/meta/llama-3_1-405b-instruct
 langchain_huggingface
-crewai
-crewai_tools
-python-pptx
-langgraph
+
+# llama-index
 llama-index
 llama-index-llms-ollama
 llama-index-embeddings-ollama
 llama-index-llms-huggingface
+llama-index-llms-huggingface-api
 llama-index-embeddings-huggingface

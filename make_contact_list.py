@@ -1,67 +1,95 @@
-import pandas as pd
+import json
+import click
 from faker import Faker
-from collections import OrderedDict
+from itertools import repeat
 
-JOBS = {
-    1: {'name': 'Специалист', 'weight': 0.7},
-    2: {'name': 'Старший специалист', 'weight': 0.5}, 
-    3: {'name': 'Начальник отдела', 'weight': 0.3}, 
-    4: {'name': 'Директор', 'weight': 0.1}, 
-}
+@click.command()
+@click.argument('locale', type=click.Choice(['en_US', 'ru_RU']), default='en_US')
+def main(locale: str):
+    faker = Faker(locale)
 
-DEPTS = {
-    1: {
-        'name': 'Столовая',
-        'weight': 0.2,
-        'responsible_for': [
-            'Питание сотрудников',
-            'Завтраки',
-            'Обеды',
-        ],
-    },
-    2: {
-        'name': 'Бухгалтерия',
-        'weight': 0.2,
-        'responsible_for': [
-            'Заработная плата',
-            'Отпускные',
-            'Авансовый отчет',
-        ],
-    },
-    3: {
-        'name': 'IT support',
-        'weight': 0.5,
-        'responsible_for': [
-            'Выдать новый компьютер',
-            'Не работает компьютер',
-        ],
-    },
-}
+    with open('./data/contacts_structure.json', 'rt') as fp:
+        data = json.load(fp)
+        JOBS = data['jobs'][locale]
+        DEPTS = data['departments'][locale]
+        LOCATIONS = data['locations'][locale]
 
-JOBS_WEIGHTS = OrderedDict([(n, v['weight']) for n, v in JOBS.items()])
-DEPTS_WEIGHTS = OrderedDict([(n, v['weight']) for n, v in DEPTS.items()])
+    indent = lambda n: ''.join(repeat('  ', n))
 
-faker = Faker('ru_RU')
+    output = [
+        f"<?xml version='1.0' encoding='utf-8'?>",
+        f"<contact_list locale='{locale}'>",
+    ]
+    labels = []
 
-depts = []
-for id in DEPTS:
-    dept = DEPTS[id]['name']
-    resp = ','.join(DEPTS[id]['responsible_for'])
-    depts.append({'name': dept, 'responsible_for': resp})
-df_depts = pd.DataFrame(depts)
+    for loc_id in LOCATIONS:
+        loc = LOCATIONS[loc_id]["name"]
 
-contacts = []
-for _ in range(30):
-    name = faker.unique.name()
-    phone = faker.unique.phone_number()
-    job_id = faker.random_elements(JOBS_WEIGHTS, length=1, use_weighting=True)[0]
-    job = JOBS[job_id]['name']
-    dept_id = faker.random_elements(DEPTS_WEIGHTS, length=1, use_weighting=True)[0]
-    dept = DEPTS[dept_id]['name']
-    print(f'{name}, {phone}, {job}, {dept}')
-    contacts.append({'full_name': name, 'phone': phone, 'job_title': job, 'department': dept})
+        output.append(f'{indent(1)}<location>')
+        output.append(f'{indent(2)}<location_id>{loc_id}</location_id>')
+        output.append(f'{indent(2)}<location_name>{loc}</location_name>')
+        output.append(f'{indent(2)}<departments>')
 
-df_contacts = pd.DataFrame(contacts)
+        labels.append({
+            'label': loc,
+            'value': [loc_id, None, None, None],
+            'children': []
+        })
+        loc_label = labels[-1]
 
-df_depts.to_xml("./data/departments.xml", root_name='departments', row_name='department', index=False)
-df_contacts.to_xml("./data/contacts.xml", root_name='contact_list', row_name='person', index=False)
+        for dept_id in DEPTS:
+            dept = DEPTS[dept_id]["name"]
+
+            output.append(f'{indent(3)}<department>')
+            output.append(f'{indent(4)}<department_id>{dept_id}</department_id>')
+            output.append(f'{indent(4)}<department_name>{dept}</department_name>')
+            output.append(f'{indent(4)}<responsibilities>')
+            for resp in DEPTS[dept_id]["responsible_for"]:
+                output.append(f'{indent(5)}<responsibility>{resp}</responsibility>')
+            output.append(f'{indent(4)}</responsibilities>')
+            output.append(f'{indent(4)}<staff>')
+
+            loc_label['children'].append({
+                'label': dept,
+                'value': [loc_id, dept_id, None, None],
+                'children': []
+            })
+            dept_label = loc_label['children'][-1]
+
+            for job_id in reversed(JOBS):
+                job = JOBS[job_id]["name"]
+
+                for _ in range(faker.random_int(1, int(JOBS[job_id]['max_count']))):
+                    person_id = faker.unique.random_int(1, 1000)
+                    full_name = faker.unique.name()
+                    phone = faker.unique.phone_number()
+
+                    output.append(f'{indent(5)}<person>')
+                    output.append(f'{indent(6)}<person_id>{person_id}</person_id>')
+                    output.append(f'{indent(6)}<full_name>{full_name}</full_name>')
+                    output.append(f'{indent(6)}<phone>{phone}</phone>')
+                    # output.append(f'{indent(6)}<position>{job}</position>')
+                    # output.append(f'{indent(6)}<department>{dept}</department>')
+                    # output.append(f'{indent(6)}<location>{loc}</location>')
+                    output.append(f'{indent(5)}</person>')
+
+                    dept_label['children'].append({
+                        'label': f'{full_name}, {job}, {phone}',
+                        'value': [loc_id, dept_id, job_id, person_id],
+                    })
+
+            output.append(f'{indent(4)}</staff>')
+            output.append(f'{indent(3)}</department>')
+        output.append(f'{indent(2)}</departments>')
+        output.append(f'{indent(1)}</location>')
+
+    output.append('</contact_list>')
+
+    with open('./data/contacts.xml', 'wt') as fp:
+        fp.writelines([line + '\n' for line in output])
+
+    with open('./data/labels.json', 'wt') as fp:
+        json.dump(labels, fp, ensure_ascii=False, indent=2)
+
+if __name__ == '__main__':
+    main()

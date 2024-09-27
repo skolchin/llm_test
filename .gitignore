@@ -3,3 +3,4 @@
 .langchain.db
 __pycache__
 project/*.pkl
+docs/RAG.docx

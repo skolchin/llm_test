@@ -1,18 +1,23 @@
+# sudo systemctl start ollama
 from llama_index.core import Settings
 from llama_index.llms.ollama import Ollama
 from llama_index.core import VectorStoreIndex
 from llama_index.core import SimpleDirectoryReader
+from llama_index.readers.file import XMLReader
 from llama_index.embeddings.ollama import OllamaEmbedding
 
-llm = Ollama(model="mistral-nemo")
+llm = Ollama(model="llama3.1")
 emded_llm = OllamaEmbedding(model_name="llama3.1")
 
 Settings.llm = llm
 Settings.embed_model = emded_llm
 
-documents = SimpleDirectoryReader('./data/', required_exts=['.xml']).load_data()
-
+documents = SimpleDirectoryReader('./data/', 
+                                  required_exts=['.xml'], 
+                                  file_extractor={'.xml': XMLReader()}).load_data()
+print(documents)
 vector_index = VectorStoreIndex.from_documents(documents)
+
 # query_engine = vector_index.as_query_engine(llm=llm)
 
 SYS_PROMPT = ("""

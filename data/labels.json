@@ -1,0 +1,823 @@
+[
+  {
+    "label": "Moscow",
+    "value": [
+      "1",
+      null,
+      null,
+      null
+    ],
+    "children": [
+      {
+        "label": "Caffeteria",
+        "value": [
+          "1",
+          "1",
+          null,
+          null
+        ],
+        "children": [
+          {
+            "label": "Chad Brown, Director, 530.215.2594",
+            "value": [
+              "1",
+              "1",
+              "4",
+              725
+            ]
+          },
+          {
+            "label": "Mindy Taylor, Team lead, 840-201-5569x2657",
+            "value": [
+              "1",
+              "1",
+              "3",
+              221
+            ]
+          },
+          {
+            "label": "Daniel Rivera, Team lead, 674.990.2989",
+            "value": [
+              "1",
+              "1",
+              "3",
+              390
+            ]
+          },
+          {
+            "label": "Jillian Kennedy, Chief specialist, 998.915.6780",
+            "value": [
+              "1",
+              "1",
+              "2",
+              621
+            ]
+          },
+          {
+            "label": "Richard Davis, Chief specialist, 438-428-0740x0328",
+            "value": [
+              "1",
+              "1",
+              "2",
+              700
+            ]
+          },
+          {
+            "label": "Mandy Gaines, Specialist, (845)400-1372x90595",
+            "value": [
+              "1",
+              "1",
+              "1",
+              139
+            ]
+          },
+          {
+            "label": "Rita Zimmerman, Specialist, 404.640.9749x75055",
+            "value": [
+              "1",
+              "1",
+              "1",
+              380
+            ]
+          },
+          {
+            "label": "Ashley Nguyen DDS, Specialist, 001-889-532-1740x15081",
+            "value": [
+              "1",
+              "1",
+              "1",
+              57
+            ]
+          },
+          {
+            "label": "Clinton Ramirez, Specialist, (636)756-2720",
+            "value": [
+              "1",
+              "1",
+              "1",
+              148
+            ]
+          },
+          {
+            "label": "Carrie Scott, Specialist, +1-438-208-1225",
+            "value": [
+              "1",
+              "1",
+              "1",
+              135
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Accounting",
+        "value": [
+          "1",
+          "2",
+          null,
+          null
+        ],
+        "children": [
+          {
+            "label": "Michael Cummings, Director, 001-637-606-7536",
+            "value": [
+              "1",
+              "2",
+              "4",
+              648
+            ]
+          },
+          {
+            "label": "Adam Martin, Team lead, (286)647-0084",
+            "value": [
+              "1",
+              "2",
+              "3",
+              159
+            ]
+          },
+          {
+            "label": "Dennis Williamson, Team lead, +1-933-630-0214x4890",
+            "value": [
+              "1",
+              "2",
+              "3",
+              115
+            ]
+          },
+          {
+            "label": "Amanda Suarez, Chief specialist, 642-822-2155x52998",
+            "value": [
+              "1",
+              "2",
+              "2",
+              548
+            ]
+          },
+          {
+            "label": "Samantha Harris, Chief specialist, 730.779.1029x2507",
+            "value": [
+              "1",
+              "2",
+              "2",
+              242
+            ]
+          },
+          {
+            "label": "Alex Schneider MD, Chief specialist, 681.665.3833x4018",
+            "value": [
+              "1",
+              "2",
+              "2",
+              964
+            ]
+          },
+          {
+            "label": "Kristina Collins, Chief specialist, 3249641003",
+            "value": [
+              "1",
+              "2",
+              "2",
+              293
+            ]
+          },
+          {
+            "label": "Christina Washington, Chief specialist, (614)703-9766x61834",
+            "value": [
+              "1",
+              "2",
+              "2",
+              929
+            ]
+          },
+          {
+            "label": "Andrew Bridges, Specialist, +1-618-491-8853x0101",
+            "value": [
+              "1",
+              "2",
+              "1",
+              848
+            ]
+          },
+          {
+            "label": "Jonathon White, Specialist, 8965786339",
+            "value": [
+              "1",
+              "2",
+              "1",
+              761
+            ]
+          },
+          {
+            "label": "Nathan Williams, Specialist, 708-832-4345x75802",
+            "value": [
+              "1",
+              "2",
+              "1",
+              319
+            ]
+          },
+          {
+            "label": "Matthew Crawford, Specialist, 329-744-9742x809",
+            "value": [
+              "1",
+              "2",
+              "1",
+              258
+            ]
+          }
+        ]
+      },
+      {
+        "label": "IT support",
+        "value": [
+          "1",
+          "3",
+          null,
+          null
+        ],
+        "children": [
+          {
+            "label": "Rachel Macias, Director, (203)612-1401x10721",
+            "value": [
+              "1",
+              "3",
+              "4",
+              276
+            ]
+          },
+          {
+            "label": "Lawrence Anderson DDS, Team lead, 001-255-905-8311x619",
+            "value": [
+              "1",
+              "3",
+              "3",
+              827
+            ]
+          },
+          {
+            "label": "Austin Harris, Team lead, (885)456-1376x8727",
+            "value": [
+              "1",
+              "3",
+              "3",
+              505
+            ]
+          },
+          {
+            "label": "Anne Miller, Chief specialist, 292.732.2999",
+            "value": [
+              "1",
+              "3",
+              "2",
+              897
+            ]
+          },
+          {
+            "label": "Chelsea Jones, Chief specialist, 939-946-9005x648",
+            "value": [
+              "1",
+              "3",
+              "2",
+              434
+            ]
+          },
+          {
+            "label": "Anna Diaz, Chief specialist, 437.383.7926x5622",
+            "value": [
+              "1",
+              "3",
+              "2",
+              169
+            ]
+          },
+          {
+            "label": "Jose Williams, Chief specialist, (657)802-5114x0508",
+            "value": [
+              "1",
+              "3",
+              "2",
+              452
+            ]
+          },
+          {
+            "label": "Beth Woods, Chief specialist, 248-786-9153x6780",
+            "value": [
+              "1",
+              "3",
+              "2",
+              120
+            ]
+          },
+          {
+            "label": "Rebekah Mendoza, Specialist, 617-577-7272x279",
+            "value": [
+              "1",
+              "3",
+              "1",
+              828
+            ]
+          },
+          {
+            "label": "Daniel Frazier, Specialist, 487-684-3764",
+            "value": [
+              "1",
+              "3",
+              "1",
+              205
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Finance",
+        "value": [
+          "1",
+          "4",
+          null,
+          null
+        ],
+        "children": [
+          {
+            "label": "Melissa Mckinney, Director, 001-647-656-5035x743",
+            "value": [
+              "1",
+              "4",
+              "4",
+              570
+            ]
+          },
+          {
+            "label": "Matthew Hill, Team lead, (219)679-9042x1305",
+            "value": [
+              "1",
+              "4",
+              "3",
+              454
+            ]
+          },
+          {
+            "label": "Justin Jones, Team lead, +1-281-528-1655x83272",
+            "value": [
+              "1",
+              "4",
+              "3",
+              156
+            ]
+          },
+          {
+            "label": "Tommy Lester, Chief specialist, 518-667-1668x2745",
+            "value": [
+              "1",
+              "4",
+              "2",
+              239
+            ]
+          },
+          {
+            "label": "Adam Fox, Chief specialist, +1-645-880-6822x520",
+            "value": [
+              "1",
+              "4",
+              "2",
+              567
+            ]
+          },
+          {
+            "label": "Peter Smith, Specialist, 392-689-5195x8661",
+            "value": [
+              "1",
+              "4",
+              "1",
+              528
+            ]
+          },
+          {
+            "label": "Mark Smith, Specialist, 611-601-3793",
+            "value": [
+              "1",
+              "4",
+              "1",
+              7
+            ]
+          },
+          {
+            "label": "Nicole Key MD, Specialist, (432)598-1718",
+            "value": [
+              "1",
+              "4",
+              "1",
+              141
+            ]
+          },
+          {
+            "label": "Justin Rowe, Specialist, 280-265-8726x5775",
+            "value": [
+              "1",
+              "4",
+              "1",
+              633
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Taman",
+    "value": [
+      "2",
+      null,
+      null,
+      null
+    ],
+    "children": [
+      {
+        "label": "Caffeteria",
+        "value": [
+          "2",
+          "1",
+          null,
+          null
+        ],
+        "children": [
+          {
+            "label": "Katelyn Charles, Director, 001-524-554-0464x09658",
+            "value": [
+              "2",
+              "1",
+              "4",
+              896
+            ]
+          },
+          {
+            "label": "Jeremy Allen, Team lead, +1-222-814-9107x275",
+            "value": [
+              "2",
+              "1",
+              "3",
+              30
+            ]
+          },
+          {
+            "label": "Brenda Barnes, Team lead, (944)951-1033",
+            "value": [
+              "2",
+              "1",
+              "3",
+              249
+            ]
+          },
+          {
+            "label": "Jessica Porter, Chief specialist, (227)202-9742",
+            "value": [
+              "2",
+              "1",
+              "2",
+              824
+            ]
+          },
+          {
+            "label": "Christopher Mathis, Specialist, (519)247-8620x0526",
+            "value": [
+              "2",
+              "1",
+              "1",
+              954
+            ]
+          },
+          {
+            "label": "Tyler Burgess, Specialist, (259)284-3036x080",
+            "value": [
+              "2",
+              "1",
+              "1",
+              806
+            ]
+          },
+          {
+            "label": "Alex Green, Specialist, +1-416-302-4283x6398",
+            "value": [
+              "2",
+              "1",
+              "1",
+              857
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Accounting",
+        "value": [
+          "2",
+          "2",
+          null,
+          null
+        ],
+        "children": [
+          {
+            "label": "Samantha Miller, Director, 492-702-0491x69989",
+            "value": [
+              "2",
+              "2",
+              "4",
+              430
+            ]
+          },
+          {
+            "label": "Ms. Michele Williams MD, Team lead, 001-265-893-7259x8506",
+            "value": [
+              "2",
+              "2",
+              "3",
+              928
+            ]
+          },
+          {
+            "label": "Lisa Mcdaniel, Team lead, 311.237.8174",
+            "value": [
+              "2",
+              "2",
+              "3",
+              986
+            ]
+          },
+          {
+            "label": "Amber Bailey, Chief specialist, 332-987-4336x2176",
+            "value": [
+              "2",
+              "2",
+              "2",
+              953
+            ]
+          },
+          {
+            "label": "Jennifer Williams, Chief specialist, 980-231-0841",
+            "value": [
+              "2",
+              "2",
+              "2",
+              274
+            ]
+          },
+          {
+            "label": "Paula Estes, Chief specialist, 887-619-0433",
+            "value": [
+              "2",
+              "2",
+              "2",
+              764
+            ]
+          },
+          {
+            "label": "Bobby Cannon, Chief specialist, +1-383-596-7213x291",
+            "value": [
+              "2",
+              "2",
+              "2",
+              539
+            ]
+          },
+          {
+            "label": "Arthur Lin, Chief specialist, 286.879.0285x05469",
+            "value": [
+              "2",
+              "2",
+              "2",
+              574
+            ]
+          },
+          {
+            "label": "Gail Hartman, Specialist, +1-571-659-1171",
+            "value": [
+              "2",
+              "2",
+              "1",
+              311
+            ]
+          },
+          {
+            "label": "Stephanie Wade, Specialist, +1-534-881-2538x113",
+            "value": [
+              "2",
+              "2",
+              "1",
+              417
+            ]
+          },
+          {
+            "label": "Donald Perez, Specialist, +1-312-439-9625x199",
+            "value": [
+              "2",
+              "2",
+              "1",
+              722
+            ]
+          }
+        ]
+      },
+      {
+        "label": "IT support",
+        "value": [
+          "2",
+          "3",
+          null,
+          null
+        ],
+        "children": [
+          {
+            "label": "Ashley Perkins, Director, 001-205-460-5331x317",
+            "value": [
+              "2",
+              "3",
+              "4",
+              891
+            ]
+          },
+          {
+            "label": "Nicole Smith, Team lead, 001-406-803-5991x135",
+            "value": [
+              "2",
+              "3",
+              "3",
+              245
+            ]
+          },
+          {
+            "label": "Tara Parker, Team lead, 699.328.9564",
+            "value": [
+              "2",
+              "3",
+              "3",
+              925
+            ]
+          },
+          {
+            "label": "Sonya Ford, Chief specialist, 001-258-497-7290x3394",
+            "value": [
+              "2",
+              "3",
+              "2",
+              372
+            ]
+          },
+          {
+            "label": "Sandra Olson, Specialist, 3118632496",
+            "value": [
+              "2",
+              "3",
+              "1",
+              27
+            ]
+          },
+          {
+            "label": "Rebecca Jackson, Specialist, 466.656.3533x0532",
+            "value": [
+              "2",
+              "3",
+              "1",
+              554
+            ]
+          },
+          {
+            "label": "Sean Fitzgerald, Specialist, (562)848-8023",
+            "value": [
+              "2",
+              "3",
+              "1",
+              674
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Finance",
+        "value": [
+          "2",
+          "4",
+          null,
+          null
+        ],
+        "children": [
+          {
+            "label": "Danny Harvey, Director, 3193630206",
+            "value": [
+              "2",
+              "4",
+              "4",
+              127
+            ]
+          },
+          {
+            "label": "Ronnie Hernandez, Team lead, 222.962.5204x570",
+            "value": [
+              "2",
+              "4",
+              "3",
+              668
+            ]
+          },
+          {
+            "label": "John Marquez, Chief specialist, 001-754-859-8093x12956",
+            "value": [
+              "2",
+              "4",
+              "2",
+              681
+            ]
+          },
+          {
+            "label": "Christina Henderson, Chief specialist, (326)997-9942x75475",
+            "value": [
+              "2",
+              "4",
+              "2",
+              615
+            ]
+          },
+          {
+            "label": "Hannah Mcintyre, Chief specialist, (851)506-1340x1974",
+            "value": [
+              "2",
+              "4",
+              "2",
+              600
+            ]
+          },
+          {
+            "label": "Theresa Serrano, Chief specialist, (802)491-3091x414",
+            "value": [
+              "2",
+              "4",
+              "2",
+              517
+            ]
+          },
+          {
+            "label": "Julian Johnson, Chief specialist, 001-913-486-3440",
+            "value": [
+              "2",
+              "4",
+              "2",
+              976
+            ]
+          },
+          {
+            "label": "Kathy Shaw, Specialist, 292-338-2539",
+            "value": [
+              "2",
+              "4",
+              "1",
+              738
+            ]
+          },
+          {
+            "label": "John Lin, Specialist, (854)322-2751",
+            "value": [
+              "2",
+              "4",
+              "1",
+              815
+            ]
+          },
+          {
+            "label": "Kevin Mckenzie, Specialist, 384-665-2765x6788",
+            "value": [
+              "2",
+              "4",
+              "1",
+              686
+            ]
+          },
+          {
+            "label": "Donald Bennett, Specialist, (383)406-4226",
+            "value": [
+              "2",
+              "4",
+              "1",
+              81
+            ]
+          },
+          {
+            "label": "Aaron Braun, Specialist, (519)644-9490x7645",
+            "value": [
+              "2",
+              "4",
+              "1",
+              585
+            ]
+          },
+          {
+            "label": "Eric Lozano, Specialist, (217)243-3204",
+            "value": [
+              "2",
+              "4",
+              "1",
+              684
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,126 @@
+{
+    "jobs": {
+        "ru_RU": {
+            "1": {
+                "name": "Специалист", 
+                "max_count": 7
+            },
+            "2": {
+                "name": "Старший специалист", 
+                "max_count": 5
+            }, 
+            "3": {
+                "name": "Начальник отдела", 
+                "max_count": 2
+            },
+            "4": {
+                "name": "Директор", 
+                "max_count": 1
+            }
+        },
+        "en_US": {
+            "1": {
+                "name": "Specialist", 
+                "max_count": 7
+            },
+            "2": {
+                "name": "Chief specialist", 
+                "max_count": 5
+            }, 
+            "3": {
+                "name": "Team lead", 
+                "max_count": 2
+            },
+            "4": {
+                "name": "Director", 
+                "max_count": 1
+            } 
+        }
+    },
+    "departments": {
+        "ru_RU": {
+            "1": {
+                "name": "Столовая",
+                "responsible_for": [
+                    "Питание сотрудников",
+                    "Завтраки",
+                    "Обеды"
+                ]
+            },
+            "2": {
+                "name": "Бухгалтерия",
+                "responsible_for": [
+                    "Заработная плата",
+                    "Отпускные",
+                    "Авансовый отчет"
+                ]
+            },
+            "3": {
+                "name": "IT support",
+                "responsible_for": [
+                    "Helpdesk",
+                    "Выдать новый компьютер",
+                    "Не работает компьютер"
+                ]
+            },
+            "4": {
+                "name": "Финансы",
+                "responsible_for": [
+                    "Бюджет",
+                    "Финансовое планирование"
+                ]
+            }
+        },
+        "en_US": {
+            "1": {
+                "name": "Caffeteria",
+                "responsible_for": [
+                    "Employee meals",
+                    "Breakfast",
+                    "Dinner"
+                ]
+            },
+            "2": {
+                "name": "Accounting",
+                "responsible_for": [
+                    "Wages",
+                    "Vacation pays",
+                    "Cash advance"
+                ]
+            },
+            "3": {
+                "name": "IT support",
+                "responsible_for": [
+                    "Helpdesk",
+                    "New computer",
+                    "Computer broken"
+                ]
+            },
+            "4": {
+                "name": "Finance",
+                "responsible_for": [
+                    "Budget",
+                    "Finance"
+                ]
+            }
+        }
+    },
+    "locations": {
+        "ru_RU": {
+            "1": {
+                "name": "Москва"
+            },
+            "2": {
+                "name": "Тамань"
+            }
+        },
+        "en_US": {
+            "1": {
+                "name": "Moscow"
+            },
+            "2": {
+                "name": "Taman"
+            }
+        }
+    }
+}

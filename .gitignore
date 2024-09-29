@@ -1,6 +1,7 @@
 .venv/
 .env
 .langchain.db
+.vscode/
 __pycache__
 project/*.pkl
 docs/RAG.docx

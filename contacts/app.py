@@ -1,180 +1,153 @@
 # sudo systemctl start ollama
 # streamlit run app.py
 
-import os
 import json
 import streamlit as st
-from dotenv import load_dotenv
+from pydantic import Field
 from llama_index.core import Settings
-from llama_index.llms.ollama import Ollama
-from llama_index.core import PromptTemplate
 from streamlit_tree_select import tree_select
 from llama_index.core import VectorStoreIndex
+from llama_index.core.agent import ReActAgent
 from llama_index.readers.file import XMLReader
 from llama_index.core import SimpleDirectoryReader
 from llama_index.core.memory import ChatMemoryBuffer
 from llama_index.core.chat_engine.types import ChatMode
-from llama_index.llms.huggingface import HuggingFaceLLM
-from llama_index.embeddings.ollama import OllamaEmbedding
-from llama_index.embeddings.huggingface import HuggingFaceEmbedding
-from llama_index.llms.huggingface_api import HuggingFaceInferenceAPI
+from llama_index.core.types import ChatMessage, MessageRole
+from llama_index.core.retrievers import VectorIndexRetriever
+from llama_index.core.query_engine import RetrieverQueryEngine
+from llama_index.core.tools import FunctionTool, QueryEngineTool, ToolMetadata
 
-load_dotenv()
+from get_model import *
+from rag_tools import *
 
-@st.cache_data
-def load_data():
-    with open('./../data/labels.json', 'rt') as fp:
-        nodes = json.load(fp)
-    return nodes
-
-SYS_PROMPT = """
-    You are a chatbot, able to have normal interactions, 
-    and answer on questions related to contact list.
-
-    Consider that person's name is embedded in <full_name> tag,
-    position in <position> tag, department in <department> tag and
-    office location in <location> tag.
-
-    You must analyse the provided documents and establish relationship
-    among those tags in order to answer questions. For example, 
-    for the question 'Who is director of Accounting in Moscow?' you
-    must find a person with position equal to 'Director', department
-    equal to 'Accounting and office location equal to 'Moscow'.
-
-    If an answer is about a person, always return full person name, job title, 
-    deparment and phone number. Multiple results must be provided by one person per line.
-
-    Your answers must be precise, complete and correct.
-    If there's not enought information to answer the questions,
-    simply state you don't know.
-"""
-QUERY_WRAPPER = PromptTemplate("{query_str}")
-
-SYS_PROMPT_STABLELM = """<|SYSTEM|># """ + SYS_PROMPT
-
-QUERY_WRAPPER_STABLELM = PromptTemplate("<|USER|>{query_str}<|ASSISTANT|>")
-
-MODELS = {
-    'llama3.1': {
-        'engine': 'ollama', 
-        'model_name': 'llama3.1', 
-    }, 
-    'mistral-nemo': {
-        'engine': 'ollama', 
-        'model_name': 'mistral-nemo', 
-    },
-    'command-r': {
-        'engine': 'ollama', 
-        'model_name': 'command-r', 
-    },
-    'saiga-llama3': {
-        'engine': 'ollama', 
-        'model_name': 'bambucha/saiga-llama3', 
-    }, 
-    'stablelm': {
-        'engine': 'huggingface', 
-        'model_name': 'stabilityai/stablelm-2-1_6b-chat', 
-        'tokenizer': 'stabilityai/stablelm-2-1_6b-chat',
-        'system_prompt': SYS_PROMPT_STABLELM,
-        'query_wrapper_prompt': QUERY_WRAPPER_STABLELM,
-    },
-    'mistral-nemo-cloud': {
-        'engine': 'huggingface-cloud', 
-        'model_name': 'mistralai/Mistral-Nemo-Instruct-2407', 
-        'tokenizer': 'mistralai/Mistral-Nemo-Instruct-2407',
-    },
-}
-EMBEDDERS = {
-    'llama3.1': {
-        'engine': 'ollama', 
-        'model_name': 'llama3.1', 
-    },
-    'mistral-nemo': {
-        'engine': 'ollama', 
-        'model_name': 'mistral-nemo', 
-    },
-    'enbedrus': {
-        'engine': 'ollama', 
-        'model_name': 'evilfreelancer/enbeddrus', 
-    },
-    'baai-bge-m3': {
-        'engine': 'huggingface', 
-        'model_name': 'BAAI/bge-m3', 
-    },
-}
-
+# Defaults for UI elements
 MODEL_PARAMS = {
+    'mode': 'LLM',
     'model':'llama3.1',
     'embed':'llama3.1',
     'temperature': 0.3,
     'top_p': 0.9,
 }
 
+# Data loading
+@st.cache_data
+def load_labels() -> dict:
+    with open('./../data/labels.json', 'rt') as fp:
+        nodes = json.load(fp)
+    return nodes
+
+@st.cache_data
+def get_data() -> ET.Element:
+    with open('./../data/contacts.xml', 'rt') as fp:
+        return ET.fromstring(fp.read())
+
+@st.cache_data
+def get_data_lower() -> ET.Element:
+    with open('./../data/contacts.xml', 'rt') as fp:
+        return ET.fromstring(fp.read().lower())
+
+# Tools (LI wrappers on functions with additional metadata)
+def find_person(name: str = Field('Person name')) -> str:
+    """ Use this tool to find a person by name.
+
+        Input to this tool must be a full person name.
+
+        The tool returns person ID or multiple IDs separated by comma.
+        If no such person was found, 'Not found' will be returned.
+
+    """
+    return find_person_impl(get_data_lower(), name)
+
+def get_person_details(person_id: str | int | list = Field('Person ID')) -> str:
+    """ Use this tool to retrieve all details on single or multiple person.
+
+        Input to this tool must be either a single person ID or
+        multiple person IDs separated by comma. 
+
+        The tool returns a list of person details separated by line feed,
+        with each line containing person details separated by comma.
+    
+    """
+    return get_person_details_impl(get_data(), person_id)
+
+def find_departments(dept: str = Field('Department name and office location separated by comma')) -> str:
+    """ Use this tool to get a list of departments IDs with given name
+        and office location, if applicable. 
+
+        Input to this tool must be either a single department name
+        or a department and office location name separated by comma.
+
+        The tool returns department ID or multiple IDs separated by comma.
+    """
+    return find_departments_impl(get_data_lower(), dept)
+
+def get_department_staff(dept_id: str | int | list = Field('Department ID')) -> str:
+    """ Use this tool to get a list of person IDs who works for a given department 
+        or multiple departments.
+
+        Input to this tool must be either a single department ID or
+        multiple department IDs separated by comma.
+
+        The tool returns list of person IDs separated by comma.
+    """
+    return get_department_staff_impl(get_data(), dept_id)
+
+
+# Model loading
 @st.cache_resource
-def make_chat(model: str, embed: str, temperature: float, top_p: float):
-    print(f'Loading model {model} ({temperature}, {top_p})')
+def make_chat(mode: str, model: str, embed: str, temperature: float, top_p: float):
 
-    match MODELS[model]['engine']:
-        case 'ollama':
-            llm = Ollama(
-                model=MODELS[model]['model_name'], 
-                temperature=temperature, 
-                top_p=top_p,
-            )
-
-        case 'huggingface':
-            import torch
-            llm = HuggingFaceLLM(
-                model_name=MODELS[model]['model_name'],
-                tokenizer_name=MODELS[model].get('tokenizer', MODELS[model]['model_name']),
-                context_window=4096,
-                max_new_tokens=256,
-                generate_kwargs={
-                    "temperature": temperature or 0.01, 
-                    "do_sample": (temperature > 0.0),
-                    "top_p": top_p,
-                },
-                system_prompt=MODELS[model].get('system_prompt'),
-                query_wrapper_prompt=MODELS[model].get('query_wrapper_prompt'),
-                device_map="cuda",
-                # stopping_ids=[50278, 50279, 50277, 1, 0],
-                tokenizer_kwargs={"max_length": 4096},
-                model_kwargs={"torch_dtype": torch.float16}
-            )
-
-        case 'huggingface-cloud':
-            import torch
-            llm = HuggingFaceInferenceAPI(
-                model_name=MODELS[model]['model_name'],
-                token=os.environ['HUGGINGFACE_API_KEY'],
-                temperature=temperature,
-                top_p=top_p,
-            )
-
-    print(f'Loading embedder {embed}')
-    match EMBEDDERS[embed]['engine']:
-        case 'ollama':
-            emded_llm = OllamaEmbedding(model_name=EMBEDDERS[embed]['model_name'])
-
-        case 'huggingface':
-            emded_llm = HuggingFaceEmbedding(model_name=EMBEDDERS[embed]['model_name'], device='cuda')
-
+    # Get the models
+    llm, embed_llm = get_model(model, embed, temperature=temperature, top_p=top_p)
     Settings.llm = llm
-    Settings.embed_model = emded_llm
+    Settings.embed_model = embed_llm
 
+    # Load documents to in-memory index
     documents = SimpleDirectoryReader('./../data/', 
                                       required_exts=['.xml'],
                                       file_extractor={'.xml': XMLReader()}).load_data()
     vector_index = VectorStoreIndex.from_documents(documents)
 
-    memory = ChatMemoryBuffer.from_defaults(token_limit=1500)
-    chat = vector_index.as_chat_engine(
-        chat_mode=ChatMode.CONDENSE_PLUS_CONTEXT,
-        llm=llm,
-        system_prompt=SYS_PROMPT,
-        memory=memory,
-    )
-    return chat
+    # Build a chat engine
+    match mode:
+        case 'LLM':
+            memory = ChatMemoryBuffer.from_defaults(token_limit=1500)
+            return vector_index.as_chat_engine(
+                chat_mode=ChatMode.CONTEXT,
+                llm=llm,
+                system_prompt=SYS_PROMPT_SIMPLE,
+                memory=memory,
+            )
+        
+        case 'RAG':
+            query_llm, _ = get_model(model, embed=None, system_prompt=SYS_PROMPT_REACT_QUERY)
+            retriever = VectorIndexRetriever(vector_index, verbose=True)
+            tools = [
+                FunctionTool.from_defaults(find_person),
+                FunctionTool.from_defaults(get_person_details),
+                FunctionTool.from_defaults(find_departments),
+                FunctionTool.from_defaults(get_department_staff),
+                QueryEngineTool(
+                    query_engine=RetrieverQueryEngine.from_args(
+                        retriever=retriever,
+                        llm=query_llm,
+                        verbose=True),
+                    metadata=ToolMetadata(
+                        name="search_contact_list",
+                        description="Contact list query engine",
+                    ),
+                ),
+            ]
+            memory = ChatMemoryBuffer.from_defaults(token_limit=1500)
+            return ReActAgent.from_tools(
+                tools=tools,
+                llm=llm,
+                memory=memory,
+                max_iterations=30,
+                context=SYS_PROMPT_REACT,
+                verbose=True,
+            )
+
 
 def query_llm(query: str, history: list, params: dict) -> str:
     print(f'Query: {query}')
@@ -186,7 +159,7 @@ def params_from_state() -> dict:
     return {param: st.session_state[param] for param in MODEL_PARAMS}
 
 # Data loading (cached)
-contacts = load_data()
+contacts = load_labels()
 
 # Initialize state variables
 for param, value in (MODEL_PARAMS | {'chat_history': []}).items():
@@ -204,6 +177,11 @@ with tabs[0]:
             query=query,
             history=st.session_state["chat_history"],
             params=params_from_state())
+        if st.session_state["mode"] == 'RAG':
+            st.session_state["chat_history"].extend([
+                ChatMessage(role=MessageRole.USER, content=query),
+                ChatMessage(role=MessageRole.ASSISTANT, content=response),
+            ])
 
     for msg in st.session_state["chat_history"]:
         role = msg.role
@@ -217,7 +195,8 @@ with tabs[1]:
 
 with tabs[2]:
     st.header('Parameters')
-    with st.container(height=350):
+    with st.container(height=480):
+        st.selectbox('Mode', ['LLM', 'RAG'], key='mode')
         st.selectbox('Model', MODELS, key='model')
         st.selectbox('Embedder', EMBEDDERS, key='embed')
         st.slider('Temperature', 0.0, 1.0, step=0.1, key='temperature')

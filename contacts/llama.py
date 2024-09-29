@@ -15,7 +15,6 @@ Settings.embed_model = emded_llm
 documents = SimpleDirectoryReader('./data/', 
                                   required_exts=['.xml'], 
                                   file_extractor={'.xml': XMLReader()}).load_data()
-print(documents)
 vector_index = VectorStoreIndex.from_documents(documents)
 
 # query_engine = vector_index.as_query_engine(llm=llm)

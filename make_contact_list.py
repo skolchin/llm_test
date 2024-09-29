@@ -22,8 +22,9 @@ def main(locale: str):
     ]
     labels = []
 
-    for loc_id in LOCATIONS:
-        loc = LOCATIONS[loc_id]["name"]
+    loc_id, dept_id, person_id = 1,1,1
+    for loc_key in LOCATIONS:
+        loc = LOCATIONS[loc_key]["name"]
 
         output.append(f'{indent(1)}<location>')
         output.append(f'{indent(2)}<location_id>{loc_id}</location_id>')
@@ -32,35 +33,34 @@ def main(locale: str):
 
         labels.append({
             'label': loc,
-            'value': [loc_id, None, None, None],
+            'value': [loc_id, None, None],
             'children': []
         })
         loc_label = labels[-1]
 
-        for dept_id in DEPTS:
-            dept = DEPTS[dept_id]["name"]
+        for dept_key in DEPTS:
+            dept = DEPTS[dept_key]["name"]
 
             output.append(f'{indent(3)}<department>')
             output.append(f'{indent(4)}<department_id>{dept_id}</department_id>')
             output.append(f'{indent(4)}<department_name>{dept}</department_name>')
             output.append(f'{indent(4)}<responsibilities>')
-            for resp in DEPTS[dept_id]["responsible_for"]:
+            for resp in DEPTS[dept_key]["responsible_for"]:
                 output.append(f'{indent(5)}<responsibility>{resp}</responsibility>')
             output.append(f'{indent(4)}</responsibilities>')
             output.append(f'{indent(4)}<staff>')
 
             loc_label['children'].append({
                 'label': dept,
-                'value': [loc_id, dept_id, None, None],
+                'value': [loc_id, dept_id, None],
                 'children': []
             })
             dept_label = loc_label['children'][-1]
 
-            for job_id in reversed(JOBS):
-                job = JOBS[job_id]["name"]
+            for job_key in reversed(JOBS):
+                job = JOBS[job_key]["name"]
 
-                for _ in range(faker.random_int(1, int(JOBS[job_id]['max_count']))):
-                    person_id = faker.unique.random_int(1, 1000)
+                for _ in range(faker.random_int(1, int(JOBS[job_key]['max_count']))):
                     full_name = faker.unique.name()
                     phone = faker.unique.phone_number()
 
@@ -68,20 +68,24 @@ def main(locale: str):
                     output.append(f'{indent(6)}<person_id>{person_id}</person_id>')
                     output.append(f'{indent(6)}<full_name>{full_name}</full_name>')
                     output.append(f'{indent(6)}<phone>{phone}</phone>')
-                    # output.append(f'{indent(6)}<position>{job}</position>')
+                    output.append(f'{indent(6)}<position>{job}</position>')
                     # output.append(f'{indent(6)}<department>{dept}</department>')
                     # output.append(f'{indent(6)}<location>{loc}</location>')
                     output.append(f'{indent(5)}</person>')
 
                     dept_label['children'].append({
                         'label': f'{full_name}, {job}, {phone}',
-                        'value': [loc_id, dept_id, job_id, person_id],
+                        'value': [loc_id, dept_id, person_id],
                     })
+                    person_id += 1
 
             output.append(f'{indent(4)}</staff>')
             output.append(f'{indent(3)}</department>')
+            dept_id += 1
+            
         output.append(f'{indent(2)}</departments>')
         output.append(f'{indent(1)}</location>')
+        loc_id += 1
 
     output.append('</contact_list>')
 

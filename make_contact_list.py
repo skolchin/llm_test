@@ -69,8 +69,8 @@ def main(locale: str):
                     output.append(f'{indent(6)}<full_name>{full_name}</full_name>')
                     output.append(f'{indent(6)}<phone>{phone}</phone>')
                     output.append(f'{indent(6)}<position>{job}</position>')
-                    # output.append(f'{indent(6)}<department>{dept}</department>')
-                    # output.append(f'{indent(6)}<location>{loc}</location>')
+                    output.append(f'{indent(6)}<department>{dept}</department>')
+                    output.append(f'{indent(6)}<location>{loc}</location>')
                     output.append(f'{indent(5)}</person>')
 
                     dept_label['children'].append({

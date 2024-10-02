@@ -19,6 +19,7 @@ from llama_index.core.tools import FunctionTool, QueryEngineTool, ToolMetadata
 
 from get_model import *
 from rag_tools import *
+from prompts import get_prompt
 
 # Defaults for UI elements
 MODEL_PARAMS = {
@@ -92,13 +93,13 @@ def get_department_staff(dept_id: str | int | list = Field('Department ID')) -> 
     """
     return get_department_staff_impl(get_data(), dept_id)
 
-
 # Model loading
 @st.cache_resource
 def make_chat(mode: str, model: str, embed: str, temperature: float, top_p: float):
 
     # Get the models
     llm, embed_llm = get_model(model, embed, temperature=temperature, top_p=top_p)
+    sys_prompt = get_system_prompt(model)
     Settings.llm = llm
     Settings.embed_model = embed_llm
 
@@ -115,12 +116,12 @@ def make_chat(mode: str, model: str, embed: str, temperature: float, top_p: floa
             return vector_index.as_chat_engine(
                 chat_mode=ChatMode.CONTEXT,
                 llm=llm,
-                system_prompt=SYS_PROMPT_SIMPLE,
+                system_prompt=sys_prompt,
                 memory=memory,
             )
         
         case 'RAG':
-            query_llm, _ = get_model(model, embed=None, system_prompt=SYS_PROMPT_REACT_QUERY)
+            query_llm, _ = get_model(model, embed=None, system_prompt=get_prompt('system_query_react'))
             retriever = VectorIndexRetriever(vector_index, verbose=True)
             tools = [
                 FunctionTool.from_defaults(find_person),
@@ -144,7 +145,7 @@ def make_chat(mode: str, model: str, embed: str, temperature: float, top_p: floa
                 llm=llm,
                 memory=memory,
                 max_iterations=30,
-                context=SYS_PROMPT_REACT,
+                context=get_prompt('system_prompt_react'),
                 verbose=True,
             )
 
@@ -171,7 +172,7 @@ st.title(f'Smart contact list')
 tabs = st.tabs(["Chatbot", "Contact list", "Parameters"])
 with tabs[0]:
     st.header('Chatbot')
-    messages = st.container(height=300)
+    messages = st.container(height=500)
     if query := st.chat_input("Say something"):
         response = query_llm(
             query=query,

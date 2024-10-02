@@ -1,148 +1,196 @@
 <?xml version='1.0' encoding='utf-8'?>
-<contact_list locale='en_US'>
+<contact_list locale='ru_RU'>
   <location>
     <location_id>1</location_id>
-    <location_name>Moscow</location_name>
+    <location_name>Москва</location_name>
     <departments>
       <department>
         <department_id>1</department_id>
-        <department_name>Caffeteria</department_name>
+        <department_name>Столовая</department_name>
         <responsibilities>
-          <responsibility>Employee meals</responsibility>
-          <responsibility>Breakfast</responsibility>
-          <responsibility>Dinner</responsibility>
+          <responsibility>Питание сотрудников</responsibility>
+          <responsibility>Завтраки</responsibility>
+          <responsibility>Обеды</responsibility>
         </responsibilities>
         <staff>
           <person>
             <person_id>1</person_id>
-            <full_name>Gerald Chavez</full_name>
-            <phone>596.696.9048</phone>
-            <position>Director</position>
+            <full_name>Федосеева Екатерина Ждановна</full_name>
+            <phone>+74046353311</phone>
+            <position>Директор</position>
+            <department>Столовая</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>2</person_id>
-            <full_name>Victoria Carson</full_name>
-            <phone>+1-649-424-7117x0980</phone>
-            <position>Team lead</position>
+            <full_name>Рыбаков Никодим Александрович</full_name>
+            <phone>8 (602) 801-74-86</phone>
+            <position>Начальник отдела</position>
+            <department>Столовая</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>3</person_id>
-            <full_name>Travis Solomon</full_name>
-            <phone>001-991-926-2324x63353</phone>
-            <position>Chief specialist</position>
+            <full_name>Виктор Арсенович Шубин</full_name>
+            <phone>8 854 747 5918</phone>
+            <position>Начальник отдела</position>
+            <department>Столовая</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>4</person_id>
-            <full_name>Philip Johnson</full_name>
-            <phone>(961)767-7374</phone>
-            <position>Chief specialist</position>
+            <full_name>Антонина Макаровна Шилова</full_name>
+            <phone>+7 (242) 059-3916</phone>
+            <position>Старший специалист</position>
+            <department>Столовая</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>5</person_id>
-            <full_name>Jared Mitchell</full_name>
-            <phone>+1-708-898-2174x24989</phone>
-            <position>Chief specialist</position>
+            <full_name>Турова Варвара Артемовна</full_name>
+            <phone>8 (335) 160-8739</phone>
+            <position>Специалист</position>
+            <department>Столовая</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>6</person_id>
-            <full_name>Molly Lee</full_name>
-            <phone>456.376.9784x7556</phone>
-            <position>Specialist</position>
+            <full_name>Светлана Тимуровна Моисеева</full_name>
+            <phone>85674840817</phone>
+            <position>Специалист</position>
+            <department>Столовая</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>7</person_id>
-            <full_name>Tiffany Davis</full_name>
-            <phone>+1-613-975-1786x6729</phone>
-            <position>Specialist</position>
+            <full_name>Ефремова Марфа Руслановна</full_name>
+            <phone>8 322 451 42 86</phone>
+            <position>Специалист</position>
+            <department>Столовая</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>8</person_id>
-            <full_name>Jason Shah</full_name>
-            <phone>+1-867-219-3350x8179</phone>
-            <position>Specialist</position>
+            <full_name>Савелий Геннадиевич Рогов</full_name>
+            <phone>8 (044) 340-88-60</phone>
+            <position>Специалист</position>
+            <department>Столовая</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>9</person_id>
-            <full_name>Amanda Merritt</full_name>
-            <phone>+1-547-529-6394x966</phone>
-            <position>Specialist</position>
+            <full_name>Зинаида Федоровна Миронова</full_name>
+            <phone>+7 (986) 517-60-40</phone>
+            <position>Специалист</position>
+            <department>Столовая</department>
+            <location>Москва</location>
+          </person>
+          <person>
+            <person_id>10</person_id>
+            <full_name>Борис Феодосьевич Дементьев</full_name>
+            <phone>+7 293 670 5872</phone>
+            <position>Специалист</position>
+            <department>Столовая</department>
+            <location>Москва</location>
           </person>
         </staff>
       </department>
       <department>
         <department_id>2</department_id>
-        <department_name>Accounting</department_name>
+        <department_name>Бухгалтерия</department_name>
         <responsibilities>
-          <responsibility>Wages</responsibility>
-          <responsibility>Vacation pays</responsibility>
-          <responsibility>Cash advance</responsibility>
+          <responsibility>Заработная плата</responsibility>
+          <responsibility>Отпускные</responsibility>
+          <responsibility>Авансовый отчет</responsibility>
         </responsibilities>
         <staff>
           <person>
-            <person_id>10</person_id>
-            <full_name>Regina Johnson</full_name>
-            <phone>402-794-0851</phone>
-            <position>Director</position>
-          </person>
-          <person>
             <person_id>11</person_id>
-            <full_name>Lisa Ewing</full_name>
-            <phone>(678)232-9056x8949</phone>
-            <position>Team lead</position>
+            <full_name>Феврония Тарасовна Казакова</full_name>
+            <phone>8 456 323 33 82</phone>
+            <position>Директор</position>
+            <department>Бухгалтерия</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>12</person_id>
-            <full_name>Sharon Crawford</full_name>
-            <phone>725.458.8684</phone>
-            <position>Chief specialist</position>
+            <full_name>Венедикт Харитонович Устинов</full_name>
+            <phone>8 052 788 7910</phone>
+            <position>Начальник отдела</position>
+            <department>Бухгалтерия</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>13</person_id>
-            <full_name>Megan Drake</full_name>
-            <phone>(602)412-0672</phone>
-            <position>Chief specialist</position>
+            <full_name>Гуляев Давыд Дорофеевич</full_name>
+            <phone>8 (217) 930-48-05</phone>
+            <position>Начальник отдела</position>
+            <department>Бухгалтерия</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>14</person_id>
-            <full_name>Ashley Jacobson</full_name>
-            <phone>+1-530-778-9269x72284</phone>
-            <position>Chief specialist</position>
+            <full_name>Лариса Аскольдовна Костина</full_name>
+            <phone>+78469854849</phone>
+            <position>Старший специалист</position>
+            <department>Бухгалтерия</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>15</person_id>
-            <full_name>Megan Mills</full_name>
-            <phone>794-684-8686</phone>
-            <position>Specialist</position>
+            <full_name>Шашков Федот Андреевич</full_name>
+            <phone>8 117 597 9366</phone>
+            <position>Специалист</position>
+            <department>Бухгалтерия</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>16</person_id>
-            <full_name>Alexander Walker</full_name>
-            <phone>356.539.7199</phone>
-            <position>Specialist</position>
+            <full_name>Василиса Владиславовна Блохина</full_name>
+            <phone>8 (353) 988-92-70</phone>
+            <position>Специалист</position>
+            <department>Бухгалтерия</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>17</person_id>
-            <full_name>Paul Charles</full_name>
-            <phone>556.638.2751x8235</phone>
-            <position>Specialist</position>
+            <full_name>Кондрат Эдгарович Лазарев</full_name>
+            <phone>84673319808</phone>
+            <position>Специалист</position>
+            <department>Бухгалтерия</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>18</person_id>
-            <full_name>Justin Smith</full_name>
-            <phone>3763722141</phone>
-            <position>Specialist</position>
+            <full_name>Мокей Игнатович Матвеев</full_name>
+            <phone>+7 (285) 749-8190</phone>
+            <position>Специалист</position>
+            <department>Бухгалтерия</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>19</person_id>
-            <full_name>Kyle Hayden</full_name>
-            <phone>001-743-646-2144x50750</phone>
-            <position>Specialist</position>
+            <full_name>Савелий Евстигнеевич Беляев</full_name>
+            <phone>8 159 284 41 74</phone>
+            <position>Специалист</position>
+            <department>Бухгалтерия</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>20</person_id>
-            <full_name>Molly Ortega</full_name>
-            <phone>(309)307-2466x832</phone>
-            <position>Specialist</position>
+            <full_name>Марфа Вениаминовна Дорофеева</full_name>
+            <phone>8 (327) 764-3733</phone>
+            <position>Специалист</position>
+            <department>Бухгалтерия</department>
+            <location>Москва</location>
+          </person>
+          <person>
+            <person_id>21</person_id>
+            <full_name>Михеев Лазарь Эдуардович</full_name>
+            <phone>+7 344 102 6309</phone>
+            <position>Специалист</position>
+            <department>Бухгалтерия</department>
+            <location>Москва</location>
           </person>
         </staff>
       </department>
@@ -151,133 +199,131 @@
         <department_name>IT support</department_name>
         <responsibilities>
           <responsibility>Helpdesk</responsibility>
-          <responsibility>New computer</responsibility>
-          <responsibility>Computer broken</responsibility>
+          <responsibility>Выдать новый компьютер</responsibility>
+          <responsibility>Не работает компьютер</responsibility>
         </responsibilities>
         <staff>
           <person>
-            <person_id>21</person_id>
-            <full_name>Amanda Bishop</full_name>
-            <phone>4456640685</phone>
-            <position>Director</position>
-          </person>
-          <person>
             <person_id>22</person_id>
-            <full_name>Nicholas Medina</full_name>
-            <phone>001-800-859-5530x298</phone>
-            <position>Team lead</position>
+            <full_name>Морозова Маргарита Романовна</full_name>
+            <phone>+7 (845) 348-56-29</phone>
+            <position>Директор</position>
+            <department>IT support</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>23</person_id>
-            <full_name>Jennifer Diaz</full_name>
-            <phone>(859)983-2986x9963</phone>
-            <position>Team lead</position>
+            <full_name>Мельников Леонид Ануфриевич</full_name>
+            <phone>87376513743</phone>
+            <position>Начальник отдела</position>
+            <department>IT support</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>24</person_id>
-            <full_name>Judy West</full_name>
-            <phone>467-761-8154x2196</phone>
-            <position>Chief specialist</position>
+            <full_name>Нонна Георгиевна Молчанова</full_name>
+            <phone>8 (517) 807-75-01</phone>
+            <position>Начальник отдела</position>
+            <department>IT support</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>25</person_id>
-            <full_name>Frances Rojas</full_name>
-            <phone>609.661.4888x353</phone>
-            <position>Specialist</position>
+            <full_name>Васильева Евгения Рубеновна</full_name>
+            <phone>+7 (877) 229-89-52</phone>
+            <position>Старший специалист</position>
+            <department>IT support</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>26</person_id>
-            <full_name>Emily Bennett</full_name>
-            <phone>001-993-503-9162x45005</phone>
-            <position>Specialist</position>
+            <full_name>Акулина Робертовна Морозова</full_name>
+            <phone>+7 (566) 103-05-93</phone>
+            <position>Специалист</position>
+            <department>IT support</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>27</person_id>
-            <full_name>Joseph Benitez</full_name>
-            <phone>(861)841-9261x263</phone>
-            <position>Specialist</position>
-          </person>
-          <person>
-            <person_id>28</person_id>
-            <full_name>William Cunningham</full_name>
-            <phone>217.766.3976</phone>
-            <position>Specialist</position>
-          </person>
-          <person>
-            <person_id>29</person_id>
-            <full_name>Sarah Rose DDS</full_name>
-            <phone>001-595-546-1579x594</phone>
-            <position>Specialist</position>
+            <full_name>Пестов Терентий Ануфриевич</full_name>
+            <phone>8 916 452 0343</phone>
+            <position>Специалист</position>
+            <department>IT support</department>
+            <location>Москва</location>
           </person>
         </staff>
       </department>
       <department>
         <department_id>4</department_id>
-        <department_name>Finance</department_name>
+        <department_name>Финансы</department_name>
         <responsibilities>
-          <responsibility>Budget</responsibility>
-          <responsibility>Finance</responsibility>
+          <responsibility>Бюджет</responsibility>
+          <responsibility>Финансовое планирование</responsibility>
         </responsibilities>
         <staff>
           <person>
+            <person_id>28</person_id>
+            <full_name>Радован Терентьевич Кузьмин</full_name>
+            <phone>+7 672 990 31 60</phone>
+            <position>Директор</position>
+            <department>Финансы</department>
+            <location>Москва</location>
+          </person>
+          <person>
+            <person_id>29</person_id>
+            <full_name>Мариан Гаврилович Муравьев</full_name>
+            <phone>+73230356820</phone>
+            <position>Начальник отдела</position>
+            <department>Финансы</department>
+            <location>Москва</location>
+          </person>
+          <person>
             <person_id>30</person_id>
-            <full_name>Kevin Cooley</full_name>
-            <phone>+1-219-704-1826x67338</phone>
-            <position>Director</position>
+            <full_name>Пантелеймон Харламович Емельянов</full_name>
+            <phone>8 (731) 896-65-49</phone>
+            <position>Начальник отдела</position>
+            <department>Финансы</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>31</person_id>
-            <full_name>Amanda Garcia</full_name>
-            <phone>324-959-9098</phone>
-            <position>Team lead</position>
+            <full_name>Лукина Фаина Сергеевна</full_name>
+            <phone>8 (335) 572-03-96</phone>
+            <position>Старший специалист</position>
+            <department>Финансы</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>32</person_id>
-            <full_name>Michael Cox</full_name>
-            <phone>(976)513-8585</phone>
-            <position>Chief specialist</position>
+            <full_name>Кондрат Бориславович Веселов</full_name>
+            <phone>84600830710</phone>
+            <position>Старший специалист</position>
+            <department>Финансы</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>33</person_id>
-            <full_name>Elizabeth Anderson</full_name>
-            <phone>(366)807-9357x699</phone>
-            <position>Chief specialist</position>
+            <full_name>Иванова Ирина Павловна</full_name>
+            <phone>8 (000) 151-8502</phone>
+            <position>Старший специалист</position>
+            <department>Финансы</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>34</person_id>
-            <full_name>Mary Allen</full_name>
-            <phone>(428)477-7924x339</phone>
-            <position>Specialist</position>
+            <full_name>Синклитикия Николаевна Тихонова</full_name>
+            <phone>+7 937 226 23 93</phone>
+            <position>Старший специалист</position>
+            <department>Финансы</department>
+            <location>Москва</location>
           </person>
           <person>
             <person_id>35</person_id>
-            <full_name>Mark Perez</full_name>
-            <phone>001-298-699-4077x6259</phone>
-            <position>Specialist</position>
-          </person>
-          <person>
-            <person_id>36</person_id>
-            <full_name>Vicki Drake</full_name>
-            <phone>(471)787-0716x351</phone>
-            <position>Specialist</position>
-          </person>
-          <person>
-            <person_id>37</person_id>
-            <full_name>Raymond Green</full_name>
-            <phone>+1-238-271-1295x1551</phone>
-            <position>Specialist</position>
-          </person>
-          <person>
-            <person_id>38</person_id>
-            <full_name>Robert Tran</full_name>
-            <phone>(208)985-7842</phone>
-            <position>Specialist</position>
-          </person>
-          <person>
-            <person_id>39</person_id>
-            <full_name>Elizabeth Powell</full_name>
-            <phone>001-521-209-4002x529</phone>
-            <position>Specialist</position>
+            <full_name>Александрова Дарья Матвеевна</full_name>
+            <phone>88537914271</phone>
+            <position>Специалист</position>
+            <department>Финансы</department>
+            <location>Москва</location>
           </person>
         </staff>
       </department>
@@ -285,135 +331,219 @@
   </location>
   <location>
     <location_id>2</location_id>
-    <location_name>Taman</location_name>
+    <location_name>Тамань</location_name>
     <departments>
       <department>
         <department_id>5</department_id>
-        <department_name>Caffeteria</department_name>
+        <department_name>Столовая</department_name>
         <responsibilities>
-          <responsibility>Employee meals</responsibility>
-          <responsibility>Breakfast</responsibility>
-          <responsibility>Dinner</responsibility>
+          <responsibility>Питание сотрудников</responsibility>
+          <responsibility>Завтраки</responsibility>
+          <responsibility>Обеды</responsibility>
         </responsibilities>
         <staff>
           <person>
+            <person_id>36</person_id>
+            <full_name>Трофимова Ольга Борисовна</full_name>
+            <phone>8 (652) 343-8270</phone>
+            <position>Директор</position>
+            <department>Столовая</department>
+            <location>Тамань</location>
+          </person>
+          <person>
+            <person_id>37</person_id>
+            <full_name>Аркадий Глебович Бирюков</full_name>
+            <phone>+7 664 307 42 22</phone>
+            <position>Начальник отдела</position>
+            <department>Столовая</department>
+            <location>Тамань</location>
+          </person>
+          <person>
+            <person_id>38</person_id>
+            <full_name>Анжела Павловна Турова</full_name>
+            <phone>+7 (050) 369-02-89</phone>
+            <position>Старший специалист</position>
+            <department>Столовая</department>
+            <location>Тамань</location>
+          </person>
+          <person>
+            <person_id>39</person_id>
+            <full_name>Гедеон Федотович Новиков</full_name>
+            <phone>8 755 430 69 36</phone>
+            <position>Старший специалист</position>
+            <department>Столовая</department>
+            <location>Тамань</location>
+          </person>
+          <person>
             <person_id>40</person_id>
-            <full_name>Alexandra Contreras</full_name>
-            <phone>(287)605-1133x0128</phone>
-            <position>Director</position>
+            <full_name>Синклитикия Дмитриевна Шарова</full_name>
+            <phone>8 (794) 590-41-66</phone>
+            <position>Специалист</position>
+            <department>Столовая</department>
+            <location>Тамань</location>
           </person>
           <person>
             <person_id>41</person_id>
-            <full_name>Diana Wagner</full_name>
-            <phone>(298)376-6143</phone>
-            <position>Team lead</position>
+            <full_name>Акулина Михайловна Кириллова</full_name>
+            <phone>+7 (287) 491-15-67</phone>
+            <position>Специалист</position>
+            <department>Столовая</department>
+            <location>Тамань</location>
           </person>
           <person>
             <person_id>42</person_id>
-            <full_name>Andrea Anderson</full_name>
-            <phone>746.788.7060</phone>
-            <position>Chief specialist</position>
+            <full_name>Рожков Автоном Димитриевич</full_name>
+            <phone>8 (780) 498-53-91</phone>
+            <position>Специалист</position>
+            <department>Столовая</department>
+            <location>Тамань</location>
           </person>
           <person>
             <person_id>43</person_id>
-            <full_name>Justin Moore</full_name>
-            <phone>215.682.4221x0372</phone>
-            <position>Chief specialist</position>
+            <full_name>Одинцова Ангелина Феликсовна</full_name>
+            <phone>8 (011) 161-3447</phone>
+            <position>Специалист</position>
+            <department>Столовая</department>
+            <location>Тамань</location>
           </person>
           <person>
             <person_id>44</person_id>
-            <full_name>Jeffrey Rodgers</full_name>
-            <phone>454.697.5370x2505</phone>
-            <position>Specialist</position>
+            <full_name>Георгий Бориславович Гурьев</full_name>
+            <phone>+7 (558) 017-3988</phone>
+            <position>Специалист</position>
+            <department>Столовая</department>
+            <location>Тамань</location>
           </person>
           <person>
             <person_id>45</person_id>
-            <full_name>Kim Schwartz</full_name>
-            <phone>+1-889-262-9985x745</phone>
-            <position>Specialist</position>
+            <full_name>Наум Фокич Кабанов</full_name>
+            <phone>8 (355) 056-9267</phone>
+            <position>Специалист</position>
+            <department>Столовая</department>
+            <location>Тамань</location>
+          </person>
+          <person>
+            <person_id>46</person_id>
+            <full_name>Лидия Артемовна Соболева</full_name>
+            <phone>+7 376 365 69 32</phone>
+            <position>Специалист</position>
+            <department>Столовая</department>
+            <location>Тамань</location>
           </person>
         </staff>
       </department>
       <department>
         <department_id>6</department_id>
-        <department_name>Accounting</department_name>
+        <department_name>Бухгалтерия</department_name>
         <responsibilities>
-          <responsibility>Wages</responsibility>
-          <responsibility>Vacation pays</responsibility>
-          <responsibility>Cash advance</responsibility>
+          <responsibility>Заработная плата</responsibility>
+          <responsibility>Отпускные</responsibility>
+          <responsibility>Авансовый отчет</responsibility>
         </responsibilities>
         <staff>
           <person>
-            <person_id>46</person_id>
-            <full_name>Caitlin Mack</full_name>
-            <phone>+1-790-488-8656x376</phone>
-            <position>Director</position>
-          </person>
-          <person>
             <person_id>47</person_id>
-            <full_name>Jeremy Casey</full_name>
-            <phone>(949)898-1869x271</phone>
-            <position>Team lead</position>
+            <full_name>Валерия Геннадьевна Прохорова</full_name>
+            <phone>8 599 277 52 41</phone>
+            <position>Директор</position>
+            <department>Бухгалтерия</department>
+            <location>Тамань</location>
           </person>
           <person>
             <person_id>48</person_id>
-            <full_name>Lisa Hodges</full_name>
-            <phone>5018691866</phone>
-            <position>Team lead</position>
+            <full_name>Савва Эдуардович Виноградов</full_name>
+            <phone>+7 (494) 881-6983</phone>
+            <position>Начальник отдела</position>
+            <department>Бухгалтерия</department>
+            <location>Тамань</location>
           </person>
           <person>
             <person_id>49</person_id>
-            <full_name>Todd Ruiz</full_name>
-            <phone>+1-381-445-3557x488</phone>
-            <position>Chief specialist</position>
+            <full_name>Фотий Харламович Зимин</full_name>
+            <phone>8 (974) 572-11-31</phone>
+            <position>Начальник отдела</position>
+            <department>Бухгалтерия</department>
+            <location>Тамань</location>
           </person>
           <person>
             <person_id>50</person_id>
-            <full_name>Anna Wilson</full_name>
-            <phone>(539)707-1130</phone>
-            <position>Chief specialist</position>
+            <full_name>Радован Феофанович Ковалев</full_name>
+            <phone>8 (540) 420-15-38</phone>
+            <position>Старший специалист</position>
+            <department>Бухгалтерия</department>
+            <location>Тамань</location>
           </person>
           <person>
             <person_id>51</person_id>
-            <full_name>Kayla Huerta</full_name>
-            <phone>228-926-7706x173</phone>
-            <position>Specialist</position>
+            <full_name>Гусева Евгения Захаровна</full_name>
+            <phone>+7 (790) 568-4596</phone>
+            <position>Старший специалист</position>
+            <department>Бухгалтерия</department>
+            <location>Тамань</location>
           </person>
           <person>
             <person_id>52</person_id>
-            <full_name>Kathleen Huynh</full_name>
-            <phone>001-614-738-2536x31000</phone>
-            <position>Specialist</position>
+            <full_name>Тихонова София Никифоровна</full_name>
+            <phone>+78102935581</phone>
+            <position>Старший специалист</position>
+            <department>Бухгалтерия</department>
+            <location>Тамань</location>
           </person>
           <person>
             <person_id>53</person_id>
-            <full_name>Rebecca Villegas</full_name>
-            <phone>861.395.9433</phone>
-            <position>Specialist</position>
+            <full_name>Жданова Алевтина Харитоновна</full_name>
+            <phone>8 483 803 58 25</phone>
+            <position>Старший специалист</position>
+            <department>Бухгалтерия</department>
+            <location>Тамань</location>
           </person>
           <person>
             <person_id>54</person_id>
-            <full_name>Edwin Contreras</full_name>
-            <phone>563.471.4200x59542</phone>
-            <position>Specialist</position>
+            <full_name>Орлова Полина Владимировна</full_name>
+            <phone>8 (564) 105-91-96</phone>
+            <position>Старший специалист</position>
+            <department>Бухгалтерия</department>
+            <location>Тамань</location>
           </person>
           <person>
             <person_id>55</person_id>
-            <full_name>Seth Oconnor</full_name>
-            <phone>889.283.2206x78936</phone>
-            <position>Specialist</position>
+            <full_name>Денисова Галина Ивановна</full_name>
+            <phone>+7 387 752 96 11</phone>
+            <position>Специалист</position>
+            <department>Бухгалтерия</department>
+            <location>Тамань</location>
           </person>
           <person>
             <person_id>56</person_id>
-            <full_name>Kristin Murphy</full_name>
-            <phone>001-352-635-3362x9869</phone>
-            <position>Specialist</position>
+            <full_name>Лукин Орест Аксёнович</full_name>
+            <phone>+7 (454) 256-71-15</phone>
+            <position>Специалист</position>
+            <department>Бухгалтерия</department>
+            <location>Тамань</location>
           </person>
           <person>
             <person_id>57</person_id>
-            <full_name>Jacqueline Wolf</full_name>
-            <phone>311.825.7480x30080</phone>
-            <position>Specialist</position>
+            <full_name>Зайцева Елизавета Алексеевна</full_name>
+            <phone>+7 626 862 8325</phone>
+            <position>Специалист</position>
+            <department>Бухгалтерия</department>
+            <location>Тамань</location>
+          </person>
+          <person>
+            <person_id>58</person_id>
+            <full_name>Максимов Аким Димитриевич</full_name>
+            <phone>+74666917061</phone>
+            <position>Специалист</position>
+            <department>Бухгалтерия</department>
+            <location>Тамань</location>
+          </person>
+          <person>
+            <person_id>59</person_id>
+            <full_name>Лора Захаровна Калашникова</full_name>
+            <phone>+7 (085) 794-33-53</phone>
+            <position>Специалист</position>
+            <department>Бухгалтерия</department>
+            <location>Тамань</location>
           </person>
         </staff>
       </department>
@@ -422,91 +552,123 @@
         <department_name>IT support</department_name>
         <responsibilities>
           <responsibility>Helpdesk</responsibility>
-          <responsibility>New computer</responsibility>
-          <responsibility>Computer broken</responsibility>
+          <responsibility>Выдать новый компьютер</responsibility>
+          <responsibility>Не работает компьютер</responsibility>
         </responsibilities>
         <staff>
           <person>
-            <person_id>58</person_id>
-            <full_name>Mrs. Laura Taylor</full_name>
-            <phone>704.722.0139x42514</phone>
-            <position>Director</position>
-          </person>
-          <person>
-            <person_id>59</person_id>
-            <full_name>Rebecca Rivera</full_name>
-            <phone>733.534.9943</phone>
-            <position>Team lead</position>
-          </person>
-          <person>
             <person_id>60</person_id>
-            <full_name>Joseph Brooks</full_name>
-            <phone>652-483-5166x851</phone>
-            <position>Chief specialist</position>
+            <full_name>Ширяев Мокей Евсеевич</full_name>
+            <phone>8 422 299 11 50</phone>
+            <position>Директор</position>
+            <department>IT support</department>
+            <location>Тамань</location>
           </person>
           <person>
             <person_id>61</person_id>
-            <full_name>Willie Tran</full_name>
-            <phone>+1-673-989-4956x59139</phone>
-            <position>Specialist</position>
+            <full_name>Януарий Гордеевич Пахомов</full_name>
+            <phone>80674552101</phone>
+            <position>Начальник отдела</position>
+            <department>IT support</department>
+            <location>Тамань</location>
           </person>
           <person>
             <person_id>62</person_id>
-            <full_name>Kristen James</full_name>
-            <phone>(529)589-8133</phone>
-            <position>Specialist</position>
+            <full_name>Архип Тимурович Устинов</full_name>
+            <phone>8 245 665 8296</phone>
+            <position>Старший специалист</position>
+            <department>IT support</department>
+            <location>Тамань</location>
           </person>
           <person>
             <person_id>63</person_id>
-            <full_name>Kelsey Simmons</full_name>
-            <phone>456-788-7245</phone>
-            <position>Specialist</position>
+            <full_name>Соболева Зинаида Оскаровна</full_name>
+            <phone>86170796972</phone>
+            <position>Старший специалист</position>
+            <department>IT support</department>
+            <location>Тамань</location>
+          </person>
+          <person>
+            <person_id>64</person_id>
+            <full_name>Зоя Николаевна Гришина</full_name>
+            <phone>8 (812) 901-22-06</phone>
+            <position>Старший специалист</position>
+            <department>IT support</department>
+            <location>Тамань</location>
+          </person>
+          <person>
+            <person_id>65</person_id>
+            <full_name>Лихачев Эрнест Елисеевич</full_name>
+            <phone>8 (340) 717-56-01</phone>
+            <position>Старший специалист</position>
+            <department>IT support</department>
+            <location>Тамань</location>
+          </person>
+          <person>
+            <person_id>66</person_id>
+            <full_name>Лихачева Валентина Павловна</full_name>
+            <phone>+7 059 051 6175</phone>
+            <position>Специалист</position>
+            <department>IT support</department>
+            <location>Тамань</location>
           </person>
         </staff>
       </department>
       <department>
         <department_id>8</department_id>
-        <department_name>Finance</department_name>
+        <department_name>Финансы</department_name>
         <responsibilities>
-          <responsibility>Budget</responsibility>
-          <responsibility>Finance</responsibility>
+          <responsibility>Бюджет</responsibility>
+          <responsibility>Финансовое планирование</responsibility>
         </responsibilities>
         <staff>
           <person>
-            <person_id>64</person_id>
-            <full_name>Joshua Ramirez</full_name>
-            <phone>+1-605-446-1811x508</phone>
-            <position>Director</position>
-          </person>
-          <person>
-            <person_id>65</person_id>
-            <full_name>Robert Barker</full_name>
-            <phone>583.481.3148</phone>
-            <position>Team lead</position>
-          </person>
-          <person>
-            <person_id>66</person_id>
-            <full_name>Albert Cook</full_name>
-            <phone>710.428.3375x6217</phone>
-            <position>Team lead</position>
-          </person>
-          <person>
             <person_id>67</person_id>
-            <full_name>Jo Marquez</full_name>
-            <phone>+1-510-725-2306x2005</phone>
-            <position>Chief specialist</position>
+            <full_name>Голубев Кондрат Арсеньевич</full_name>
+            <phone>+7 656 779 65 19</phone>
+            <position>Директор</position>
+            <department>Финансы</department>
+            <location>Тамань</location>
           </person>
           <person>
             <person_id>68</person_id>
-            <full_name>Mark Oneill</full_name>
-            <phone>4702883993</phone>
-            <position>Specialist</position>
+            <full_name>Назаров Аникей Бориславович</full_name>
+            <phone>89205622499</phone>
+            <position>Начальник отдела</position>
+            <department>Финансы</department>
+            <location>Тамань</location>
           </person>
           <person>
             <person_id>69</person_id>
-            <full_name>Emily Glover</full_name>
-            <phone>745-548-9989x04012</phone>
-            <position>Specialist</position>
+            <full_name>Куликов Мефодий Фокич</full_name>
+            <phone>+7 598 385 6676</phone>
+            <position>Начальник отдела</position>
+            <department>Финансы</department>
+            <location>Тамань</location>
+          </person>
+          <person>
+            <person_id>70</person_id>
+            <full_name>Октябрина Евгеньевна Алексеева</full_name>
+            <phone>8 (345) 369-12-46</phone>
+            <position>Старший специалист</position>
+            <department>Финансы</department>
+            <location>Тамань</location>
+          </person>
+          <person>
+            <person_id>71</person_id>
+            <full_name>Оксана Аркадьевна Петрова</full_name>
+            <phone>8 (705) 739-90-02</phone>
+            <position>Старший специалист</position>
+            <department>Финансы</department>
+            <location>Тамань</location>
+          </person>
+          <person>
+            <person_id>72</person_id>
+            <full_name>Романова Вероника Леонидовна</full_name>
+            <phone>+7 (567) 902-60-63</phone>
+            <position>Специалист</position>
+            <department>Финансы</department>
+            <location>Тамань</location>
           </person>
         </staff>
       </department>

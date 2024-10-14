@@ -9,7 +9,6 @@ from streamlit_tree_select import tree_select
 from llama_index.core import VectorStoreIndex
 from llama_index.core.agent import ReActAgent
 from llama_index.readers.file import XMLReader
-from llama_index.core import SimpleDirectoryReader
 from llama_index.core.memory import ChatMemoryBuffer
 from llama_index.core.chat_engine.types import ChatMode
 from llama_index.core.types import ChatMessage, MessageRole
@@ -17,9 +16,9 @@ from llama_index.core.retrievers import VectorIndexRetriever
 from llama_index.core.query_engine import RetrieverQueryEngine
 from llama_index.core.tools import FunctionTool, QueryEngineTool, ToolMetadata
 
-from get_model import *
+from lib.get_model import get_model, get_system_prompt, list_models, list_embedders
+from lib.get_prompt import get_prompt
 from rag_tools import *
-from prompts import get_prompt
 
 # Defaults for UI elements
 MODEL_PARAMS = {
@@ -33,18 +32,18 @@ MODEL_PARAMS = {
 # Data loading
 @st.cache_data
 def load_labels() -> dict:
-    with open('./../data/labels.json', 'rt') as fp:
+    with open('./data/labels.json', 'rt') as fp:
         nodes = json.load(fp)
     return nodes
 
 @st.cache_data
 def get_data() -> ET.Element:
-    with open('./../data/contacts.xml', 'rt') as fp:
+    with open('./data/contacts.xml', 'rt') as fp:
         return ET.fromstring(fp.read())
 
 @st.cache_data
 def get_data_lower() -> ET.Element:
-    with open('./../data/contacts.xml', 'rt') as fp:
+    with open('./data/contacts.xml', 'rt') as fp:
         return ET.fromstring(fp.read().lower())
 
 # Tools (LI wrappers on functions with additional metadata)
@@ -104,9 +103,7 @@ def make_chat(mode: str, model: str, embed: str, temperature: float, top_p: floa
     Settings.embed_model = embed_llm
 
     # Load documents to in-memory index
-    documents = SimpleDirectoryReader('./../data/', 
-                                      required_exts=['.xml'],
-                                      file_extractor={'.xml': XMLReader()}).load_data()
+    documents = XMLReader(1).load_data('./data/contacts.xml')
     vector_index = VectorStoreIndex.from_documents(documents)
 
     # Build a chat engine
@@ -197,8 +194,8 @@ with tabs[1]:
 with tabs[2]:
     st.header('Parameters')
     with st.container(height=480):
-        st.selectbox('Mode', ['LLM', 'RAG'], key='mode')
-        st.selectbox('Model', MODELS, key='model')
-        st.selectbox('Embedder', EMBEDDERS, key='embed')
+        st.selectbox('Mode', ['LLM'], key='mode')
+        st.selectbox('Model', list_models(), key='model')
+        st.selectbox('Embedder', list_embedders(), key='embed')
         st.slider('Temperature', 0.0, 1.0, step=0.1, key='temperature')
         st.slider('Top_p', 0.0, 1.0, step=0.1, key='top_p')

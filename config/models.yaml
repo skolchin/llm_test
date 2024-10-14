@@ -1,0 +1,41 @@
+models:
+    llama3.1:
+        engine: 'ollama' 
+        model_name: 'llama3.1' 
+    mistral-nemo:
+        engine: 'ollama' 
+        model_name: 'mistral-nemo' 
+    stablelm:
+        engine: 'huggingface' 
+        model_name: 'stabilityai/stablelm-2-1_6b-chat' 
+        tokenizer: 'stabilityai/stablelm-2-1_6b-chat'
+        system_prompt_key: 'system_tagged'
+        query_wrapper_prompt: 'query_wrapper_tagged'
+    mistral-nemo-cloud:
+        engine: 'huggingface-cloud' 
+        model_name: 'mistralai/Mistral-Nemo-Instruct-2407' 
+        tokenizer: 'mistralai/Mistral-Nemo-Instruct-2407'
+    yandex-gpt:
+        engine: 'yandex' 
+        model_name: 'yandexgpt' 
+        system_prompt: 'yandex'
+    llama3.1-unsloth:
+        engine: 'unsloth'
+        model_name: 'unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit' 
+
+embedders:
+    llama3.1:
+        engine: 'ollama'
+        model_name: 'llama3.1'
+    mistral-nemo:
+        engine: 'ollama'
+        model_name: 'mistral-nemo'
+    enbedrus:
+        engine: 'ollama'
+        model_name: 'evilfreelancer/enbeddrus'
+    baai-bge-m3:
+        engine: 'huggingface'
+        model_name: 'BAAI/bge-m3'
+    yandex-gpt:
+        engine: 'yandex'
+        model_name: 'evilfreelancer/enbeddrus'

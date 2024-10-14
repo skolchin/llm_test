@@ -3,5 +3,8 @@
 .langchain.db
 .vscode/
 __pycache__
+.train/
+.models/
 project/*.pkl
 docs/RAG.docx
+docs/Agents.docx

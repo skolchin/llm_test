@@ -1,42 +1,27 @@
 # sudo systemctl start ollama
+import random
 from llama_index.core import Settings
-from llama_index.llms.ollama import Ollama
 from llama_index.core import VectorStoreIndex
-from llama_index.core import SimpleDirectoryReader
 from llama_index.readers.file import XMLReader
-from llama_index.embeddings.ollama import OllamaEmbedding
 
-llm = Ollama(model="llama3.1")
-emded_llm = OllamaEmbedding(model_name="llama3.1")
+from lib.get_model import get_model
+from lib.get_prompt import get_prompt
 
+llm, emded_llm = get_model('llama3.1-unsloth', 'llama3.1', temperature=0.1)
 Settings.llm = llm
 Settings.embed_model = emded_llm
 
-documents = SimpleDirectoryReader('./data/', 
-                                  required_exts=['.xml'], 
-                                  file_extractor={'.xml': XMLReader()}).load_data()
+documents = XMLReader(1).load_data('./data/contacts.xml')
+doc_str = "\n".join([x.text for x in random.choices(documents, k=3)])
+print(f'Random nodes (3):\n{doc_str}')
+
+Q = 'Кто отвечает за питание сотрудников в Тамани?'
+
 vector_index = VectorStoreIndex.from_documents(documents)
-
-# query_engine = vector_index.as_query_engine(llm=llm)
-
-SYS_PROMPT = ("""
-    You are a chatbot, able to have normal interactions, 
-    and answer on questions related to contact list.
-                
-    If a question is related to personnel responsibilities,
-    always return full person name, deparment and phone number.
-    Multiple results must be provided in one person per line.
-              
-    Your answers must be precise, complete and correct.
-    If there's not enought information to answer the questions,
-    simply state you don't know.
-    """
-)
-
 chat = vector_index.as_chat_engine(
     chat_mode='context',
     llm=llm,
-    system_prompt=SYS_PROMPT,
+    system_prompt=get_prompt('system'),
 )
-result = chat.chat('Кто в ответе за бюджет?')
-print(result)
+A = chat.chat(Q)
+print(f'\nQ: {Q}\nA: {A}')

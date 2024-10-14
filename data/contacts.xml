@@ -1,677 +1,1076 @@
 <?xml version='1.0' encoding='utf-8'?>
 <contact_list locale='ru_RU'>
-  <location>
-    <location_id>1</location_id>
-    <location_name>Москва</location_name>
-    <departments>
-      <department>
-        <department_id>1</department_id>
-        <department_name>Столовая</department_name>
-        <responsibilities>
-          <responsibility>Питание сотрудников</responsibility>
-          <responsibility>Завтраки</responsibility>
-          <responsibility>Обеды</responsibility>
-        </responsibilities>
-        <staff>
-          <person>
-            <person_id>1</person_id>
-            <full_name>Федосеева Екатерина Ждановна</full_name>
-            <phone>+74046353311</phone>
-            <position>Директор</position>
-            <department>Столовая</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>2</person_id>
-            <full_name>Рыбаков Никодим Александрович</full_name>
-            <phone>8 (602) 801-74-86</phone>
-            <position>Начальник отдела</position>
-            <department>Столовая</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>3</person_id>
-            <full_name>Виктор Арсенович Шубин</full_name>
-            <phone>8 854 747 5918</phone>
-            <position>Начальник отдела</position>
-            <department>Столовая</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>4</person_id>
-            <full_name>Антонина Макаровна Шилова</full_name>
-            <phone>+7 (242) 059-3916</phone>
-            <position>Старший специалист</position>
-            <department>Столовая</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>5</person_id>
-            <full_name>Турова Варвара Артемовна</full_name>
-            <phone>8 (335) 160-8739</phone>
-            <position>Специалист</position>
-            <department>Столовая</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>6</person_id>
-            <full_name>Светлана Тимуровна Моисеева</full_name>
-            <phone>85674840817</phone>
-            <position>Специалист</position>
-            <department>Столовая</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>7</person_id>
-            <full_name>Ефремова Марфа Руслановна</full_name>
-            <phone>8 322 451 42 86</phone>
-            <position>Специалист</position>
-            <department>Столовая</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>8</person_id>
-            <full_name>Савелий Геннадиевич Рогов</full_name>
-            <phone>8 (044) 340-88-60</phone>
-            <position>Специалист</position>
-            <department>Столовая</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>9</person_id>
-            <full_name>Зинаида Федоровна Миронова</full_name>
-            <phone>+7 (986) 517-60-40</phone>
-            <position>Специалист</position>
-            <department>Столовая</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>10</person_id>
-            <full_name>Борис Феодосьевич Дементьев</full_name>
-            <phone>+7 293 670 5872</phone>
-            <position>Специалист</position>
-            <department>Столовая</department>
-            <location>Москва</location>
-          </person>
-        </staff>
-      </department>
-      <department>
-        <department_id>2</department_id>
-        <department_name>Бухгалтерия</department_name>
-        <responsibilities>
-          <responsibility>Заработная плата</responsibility>
-          <responsibility>Отпускные</responsibility>
-          <responsibility>Авансовый отчет</responsibility>
-        </responsibilities>
-        <staff>
-          <person>
-            <person_id>11</person_id>
-            <full_name>Феврония Тарасовна Казакова</full_name>
-            <phone>8 456 323 33 82</phone>
-            <position>Директор</position>
-            <department>Бухгалтерия</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>12</person_id>
-            <full_name>Венедикт Харитонович Устинов</full_name>
-            <phone>8 052 788 7910</phone>
-            <position>Начальник отдела</position>
-            <department>Бухгалтерия</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>13</person_id>
-            <full_name>Гуляев Давыд Дорофеевич</full_name>
-            <phone>8 (217) 930-48-05</phone>
-            <position>Начальник отдела</position>
-            <department>Бухгалтерия</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>14</person_id>
-            <full_name>Лариса Аскольдовна Костина</full_name>
-            <phone>+78469854849</phone>
-            <position>Старший специалист</position>
-            <department>Бухгалтерия</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>15</person_id>
-            <full_name>Шашков Федот Андреевич</full_name>
-            <phone>8 117 597 9366</phone>
-            <position>Специалист</position>
-            <department>Бухгалтерия</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>16</person_id>
-            <full_name>Василиса Владиславовна Блохина</full_name>
-            <phone>8 (353) 988-92-70</phone>
-            <position>Специалист</position>
-            <department>Бухгалтерия</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>17</person_id>
-            <full_name>Кондрат Эдгарович Лазарев</full_name>
-            <phone>84673319808</phone>
-            <position>Специалист</position>
-            <department>Бухгалтерия</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>18</person_id>
-            <full_name>Мокей Игнатович Матвеев</full_name>
-            <phone>+7 (285) 749-8190</phone>
-            <position>Специалист</position>
-            <department>Бухгалтерия</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>19</person_id>
-            <full_name>Савелий Евстигнеевич Беляев</full_name>
-            <phone>8 159 284 41 74</phone>
-            <position>Специалист</position>
-            <department>Бухгалтерия</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>20</person_id>
-            <full_name>Марфа Вениаминовна Дорофеева</full_name>
-            <phone>8 (327) 764-3733</phone>
-            <position>Специалист</position>
-            <department>Бухгалтерия</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>21</person_id>
-            <full_name>Михеев Лазарь Эдуардович</full_name>
-            <phone>+7 344 102 6309</phone>
-            <position>Специалист</position>
-            <department>Бухгалтерия</department>
-            <location>Москва</location>
-          </person>
-        </staff>
-      </department>
-      <department>
-        <department_id>3</department_id>
-        <department_name>IT support</department_name>
-        <responsibilities>
-          <responsibility>Helpdesk</responsibility>
-          <responsibility>Выдать новый компьютер</responsibility>
-          <responsibility>Не работает компьютер</responsibility>
-        </responsibilities>
-        <staff>
-          <person>
-            <person_id>22</person_id>
-            <full_name>Морозова Маргарита Романовна</full_name>
-            <phone>+7 (845) 348-56-29</phone>
-            <position>Директор</position>
-            <department>IT support</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>23</person_id>
-            <full_name>Мельников Леонид Ануфриевич</full_name>
-            <phone>87376513743</phone>
-            <position>Начальник отдела</position>
-            <department>IT support</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>24</person_id>
-            <full_name>Нонна Георгиевна Молчанова</full_name>
-            <phone>8 (517) 807-75-01</phone>
-            <position>Начальник отдела</position>
-            <department>IT support</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>25</person_id>
-            <full_name>Васильева Евгения Рубеновна</full_name>
-            <phone>+7 (877) 229-89-52</phone>
-            <position>Старший специалист</position>
-            <department>IT support</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>26</person_id>
-            <full_name>Акулина Робертовна Морозова</full_name>
-            <phone>+7 (566) 103-05-93</phone>
-            <position>Специалист</position>
-            <department>IT support</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>27</person_id>
-            <full_name>Пестов Терентий Ануфриевич</full_name>
-            <phone>8 916 452 0343</phone>
-            <position>Специалист</position>
-            <department>IT support</department>
-            <location>Москва</location>
-          </person>
-        </staff>
-      </department>
-      <department>
-        <department_id>4</department_id>
-        <department_name>Финансы</department_name>
-        <responsibilities>
-          <responsibility>Бюджет</responsibility>
-          <responsibility>Финансовое планирование</responsibility>
-        </responsibilities>
-        <staff>
-          <person>
-            <person_id>28</person_id>
-            <full_name>Радован Терентьевич Кузьмин</full_name>
-            <phone>+7 672 990 31 60</phone>
-            <position>Директор</position>
-            <department>Финансы</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>29</person_id>
-            <full_name>Мариан Гаврилович Муравьев</full_name>
-            <phone>+73230356820</phone>
-            <position>Начальник отдела</position>
-            <department>Финансы</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>30</person_id>
-            <full_name>Пантелеймон Харламович Емельянов</full_name>
-            <phone>8 (731) 896-65-49</phone>
-            <position>Начальник отдела</position>
-            <department>Финансы</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>31</person_id>
-            <full_name>Лукина Фаина Сергеевна</full_name>
-            <phone>8 (335) 572-03-96</phone>
-            <position>Старший специалист</position>
-            <department>Финансы</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>32</person_id>
-            <full_name>Кондрат Бориславович Веселов</full_name>
-            <phone>84600830710</phone>
-            <position>Старший специалист</position>
-            <department>Финансы</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>33</person_id>
-            <full_name>Иванова Ирина Павловна</full_name>
-            <phone>8 (000) 151-8502</phone>
-            <position>Старший специалист</position>
-            <department>Финансы</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>34</person_id>
-            <full_name>Синклитикия Николаевна Тихонова</full_name>
-            <phone>+7 937 226 23 93</phone>
-            <position>Старший специалист</position>
-            <department>Финансы</department>
-            <location>Москва</location>
-          </person>
-          <person>
-            <person_id>35</person_id>
-            <full_name>Александрова Дарья Матвеевна</full_name>
-            <phone>88537914271</phone>
-            <position>Специалист</position>
-            <department>Финансы</department>
-            <location>Москва</location>
-          </person>
-        </staff>
-      </department>
-    </departments>
-  </location>
-  <location>
-    <location_id>2</location_id>
-    <location_name>Тамань</location_name>
-    <departments>
-      <department>
-        <department_id>5</department_id>
-        <department_name>Столовая</department_name>
-        <responsibilities>
-          <responsibility>Питание сотрудников</responsibility>
-          <responsibility>Завтраки</responsibility>
-          <responsibility>Обеды</responsibility>
-        </responsibilities>
-        <staff>
-          <person>
-            <person_id>36</person_id>
-            <full_name>Трофимова Ольга Борисовна</full_name>
-            <phone>8 (652) 343-8270</phone>
-            <position>Директор</position>
-            <department>Столовая</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>37</person_id>
-            <full_name>Аркадий Глебович Бирюков</full_name>
-            <phone>+7 664 307 42 22</phone>
-            <position>Начальник отдела</position>
-            <department>Столовая</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>38</person_id>
-            <full_name>Анжела Павловна Турова</full_name>
-            <phone>+7 (050) 369-02-89</phone>
-            <position>Старший специалист</position>
-            <department>Столовая</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>39</person_id>
-            <full_name>Гедеон Федотович Новиков</full_name>
-            <phone>8 755 430 69 36</phone>
-            <position>Старший специалист</position>
-            <department>Столовая</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>40</person_id>
-            <full_name>Синклитикия Дмитриевна Шарова</full_name>
-            <phone>8 (794) 590-41-66</phone>
-            <position>Специалист</position>
-            <department>Столовая</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>41</person_id>
-            <full_name>Акулина Михайловна Кириллова</full_name>
-            <phone>+7 (287) 491-15-67</phone>
-            <position>Специалист</position>
-            <department>Столовая</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>42</person_id>
-            <full_name>Рожков Автоном Димитриевич</full_name>
-            <phone>8 (780) 498-53-91</phone>
-            <position>Специалист</position>
-            <department>Столовая</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>43</person_id>
-            <full_name>Одинцова Ангелина Феликсовна</full_name>
-            <phone>8 (011) 161-3447</phone>
-            <position>Специалист</position>
-            <department>Столовая</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>44</person_id>
-            <full_name>Георгий Бориславович Гурьев</full_name>
-            <phone>+7 (558) 017-3988</phone>
-            <position>Специалист</position>
-            <department>Столовая</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>45</person_id>
-            <full_name>Наум Фокич Кабанов</full_name>
-            <phone>8 (355) 056-9267</phone>
-            <position>Специалист</position>
-            <department>Столовая</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>46</person_id>
-            <full_name>Лидия Артемовна Соболева</full_name>
-            <phone>+7 376 365 69 32</phone>
-            <position>Специалист</position>
-            <department>Столовая</department>
-            <location>Тамань</location>
-          </person>
-        </staff>
-      </department>
-      <department>
-        <department_id>6</department_id>
-        <department_name>Бухгалтерия</department_name>
-        <responsibilities>
-          <responsibility>Заработная плата</responsibility>
-          <responsibility>Отпускные</responsibility>
-          <responsibility>Авансовый отчет</responsibility>
-        </responsibilities>
-        <staff>
-          <person>
-            <person_id>47</person_id>
-            <full_name>Валерия Геннадьевна Прохорова</full_name>
-            <phone>8 599 277 52 41</phone>
-            <position>Директор</position>
-            <department>Бухгалтерия</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>48</person_id>
-            <full_name>Савва Эдуардович Виноградов</full_name>
-            <phone>+7 (494) 881-6983</phone>
-            <position>Начальник отдела</position>
-            <department>Бухгалтерия</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>49</person_id>
-            <full_name>Фотий Харламович Зимин</full_name>
-            <phone>8 (974) 572-11-31</phone>
-            <position>Начальник отдела</position>
-            <department>Бухгалтерия</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>50</person_id>
-            <full_name>Радован Феофанович Ковалев</full_name>
-            <phone>8 (540) 420-15-38</phone>
-            <position>Старший специалист</position>
-            <department>Бухгалтерия</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>51</person_id>
-            <full_name>Гусева Евгения Захаровна</full_name>
-            <phone>+7 (790) 568-4596</phone>
-            <position>Старший специалист</position>
-            <department>Бухгалтерия</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>52</person_id>
-            <full_name>Тихонова София Никифоровна</full_name>
-            <phone>+78102935581</phone>
-            <position>Старший специалист</position>
-            <department>Бухгалтерия</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>53</person_id>
-            <full_name>Жданова Алевтина Харитоновна</full_name>
-            <phone>8 483 803 58 25</phone>
-            <position>Старший специалист</position>
-            <department>Бухгалтерия</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>54</person_id>
-            <full_name>Орлова Полина Владимировна</full_name>
-            <phone>8 (564) 105-91-96</phone>
-            <position>Старший специалист</position>
-            <department>Бухгалтерия</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>55</person_id>
-            <full_name>Денисова Галина Ивановна</full_name>
-            <phone>+7 387 752 96 11</phone>
-            <position>Специалист</position>
-            <department>Бухгалтерия</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>56</person_id>
-            <full_name>Лукин Орест Аксёнович</full_name>
-            <phone>+7 (454) 256-71-15</phone>
-            <position>Специалист</position>
-            <department>Бухгалтерия</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>57</person_id>
-            <full_name>Зайцева Елизавета Алексеевна</full_name>
-            <phone>+7 626 862 8325</phone>
-            <position>Специалист</position>
-            <department>Бухгалтерия</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>58</person_id>
-            <full_name>Максимов Аким Димитриевич</full_name>
-            <phone>+74666917061</phone>
-            <position>Специалист</position>
-            <department>Бухгалтерия</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>59</person_id>
-            <full_name>Лора Захаровна Калашникова</full_name>
-            <phone>+7 (085) 794-33-53</phone>
-            <position>Специалист</position>
-            <department>Бухгалтерия</department>
-            <location>Тамань</location>
-          </person>
-        </staff>
-      </department>
-      <department>
-        <department_id>7</department_id>
-        <department_name>IT support</department_name>
-        <responsibilities>
-          <responsibility>Helpdesk</responsibility>
-          <responsibility>Выдать новый компьютер</responsibility>
-          <responsibility>Не работает компьютер</responsibility>
-        </responsibilities>
-        <staff>
-          <person>
-            <person_id>60</person_id>
-            <full_name>Ширяев Мокей Евсеевич</full_name>
-            <phone>8 422 299 11 50</phone>
-            <position>Директор</position>
-            <department>IT support</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>61</person_id>
-            <full_name>Януарий Гордеевич Пахомов</full_name>
-            <phone>80674552101</phone>
-            <position>Начальник отдела</position>
-            <department>IT support</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>62</person_id>
-            <full_name>Архип Тимурович Устинов</full_name>
-            <phone>8 245 665 8296</phone>
-            <position>Старший специалист</position>
-            <department>IT support</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>63</person_id>
-            <full_name>Соболева Зинаида Оскаровна</full_name>
-            <phone>86170796972</phone>
-            <position>Старший специалист</position>
-            <department>IT support</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>64</person_id>
-            <full_name>Зоя Николаевна Гришина</full_name>
-            <phone>8 (812) 901-22-06</phone>
-            <position>Старший специалист</position>
-            <department>IT support</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>65</person_id>
-            <full_name>Лихачев Эрнест Елисеевич</full_name>
-            <phone>8 (340) 717-56-01</phone>
-            <position>Старший специалист</position>
-            <department>IT support</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>66</person_id>
-            <full_name>Лихачева Валентина Павловна</full_name>
-            <phone>+7 059 051 6175</phone>
-            <position>Специалист</position>
-            <department>IT support</department>
-            <location>Тамань</location>
-          </person>
-        </staff>
-      </department>
-      <department>
-        <department_id>8</department_id>
-        <department_name>Финансы</department_name>
-        <responsibilities>
-          <responsibility>Бюджет</responsibility>
-          <responsibility>Финансовое планирование</responsibility>
-        </responsibilities>
-        <staff>
-          <person>
-            <person_id>67</person_id>
-            <full_name>Голубев Кондрат Арсеньевич</full_name>
-            <phone>+7 656 779 65 19</phone>
-            <position>Директор</position>
-            <department>Финансы</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>68</person_id>
-            <full_name>Назаров Аникей Бориславович</full_name>
-            <phone>89205622499</phone>
-            <position>Начальник отдела</position>
-            <department>Финансы</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>69</person_id>
-            <full_name>Куликов Мефодий Фокич</full_name>
-            <phone>+7 598 385 6676</phone>
-            <position>Начальник отдела</position>
-            <department>Финансы</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>70</person_id>
-            <full_name>Октябрина Евгеньевна Алексеева</full_name>
-            <phone>8 (345) 369-12-46</phone>
-            <position>Старший специалист</position>
-            <department>Финансы</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>71</person_id>
-            <full_name>Оксана Аркадьевна Петрова</full_name>
-            <phone>8 (705) 739-90-02</phone>
-            <position>Старший специалист</position>
-            <department>Финансы</department>
-            <location>Тамань</location>
-          </person>
-          <person>
-            <person_id>72</person_id>
-            <full_name>Романова Вероника Леонидовна</full_name>
-            <phone>+7 (567) 902-60-63</phone>
-            <position>Специалист</position>
-            <department>Финансы</department>
-            <location>Тамань</location>
-          </person>
-        </staff>
-      </department>
-    </departments>
-  </location>
+  <person>
+    <person_id>1</person_id>
+    <full_name>Мельников Прохор Ааронович</full_name>
+    <phone>88262383305</phone>
+    <position>Директор</position>
+    <department>Столовая</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Питание сотрудников</responsibility>
+      <responsibility>Завтраки</responsibility>
+      <responsibility>Обеды</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>2</person_id>
+    <full_name>Оксана Ниловна Шашкова</full_name>
+    <phone>+7 146 552 4633</phone>
+    <position>Начальник отдела</position>
+    <department>Столовая</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Питание сотрудников</responsibility>
+      <responsibility>Завтраки</responsibility>
+      <responsibility>Обеды</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>3</person_id>
+    <full_name>Григорьева Лукия Васильевна</full_name>
+    <phone>8 432 910 86 33</phone>
+    <position>Начальник отдела</position>
+    <department>Столовая</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Питание сотрудников</responsibility>
+      <responsibility>Завтраки</responsibility>
+      <responsibility>Обеды</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>4</person_id>
+    <full_name>Клавдий Артемьевич Стрелков</full_name>
+    <phone>+71725369499</phone>
+    <position>Старший специалист</position>
+    <department>Столовая</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Питание сотрудников</responsibility>
+      <responsibility>Завтраки</responsibility>
+      <responsibility>Обеды</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>5</person_id>
+    <full_name>Ангелина Антоновна Денисова</full_name>
+    <phone>+7 710 111 38 05</phone>
+    <position>Специалист</position>
+    <department>Столовая</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Питание сотрудников</responsibility>
+      <responsibility>Завтраки</responsibility>
+      <responsibility>Обеды</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>6</person_id>
+    <full_name>Максимова Евпраксия Эдуардовна</full_name>
+    <phone>8 (188) 497-87-37</phone>
+    <position>Специалист</position>
+    <department>Столовая</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Питание сотрудников</responsibility>
+      <responsibility>Завтраки</responsibility>
+      <responsibility>Обеды</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>7</person_id>
+    <full_name>Корнилов Кондратий Ярославович</full_name>
+    <phone>86126520488</phone>
+    <position>Специалист</position>
+    <department>Столовая</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Питание сотрудников</responsibility>
+      <responsibility>Завтраки</responsibility>
+      <responsibility>Обеды</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>8</person_id>
+    <full_name>Агафья Юрьевна Тихонова</full_name>
+    <phone>+7 (305) 625-1285</phone>
+    <position>Специалист</position>
+    <department>Столовая</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Питание сотрудников</responsibility>
+      <responsibility>Завтраки</responsibility>
+      <responsibility>Обеды</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>9</person_id>
+    <full_name>Шубина Вероника Анатольевна</full_name>
+    <phone>8 284 310 28 29</phone>
+    <position>Директор</position>
+    <department>Бухгалтерия</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>10</person_id>
+    <full_name>Емельян Гурьевич Александров</full_name>
+    <phone>8 127 248 05 20</phone>
+    <position>Начальник отдела</position>
+    <department>Бухгалтерия</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>11</person_id>
+    <full_name>Сильвестр Гурьевич Карпов</full_name>
+    <phone>84988022611</phone>
+    <position>Начальник отдела</position>
+    <department>Бухгалтерия</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>12</person_id>
+    <full_name>Комаров Вадим Тихонович</full_name>
+    <phone>8 (182) 057-1108</phone>
+    <position>Старший специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>13</person_id>
+    <full_name>Смирнова Прасковья Васильевна</full_name>
+    <phone>82665105798</phone>
+    <position>Старший специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>14</person_id>
+    <full_name>Исаев Карл Зиновьевич</full_name>
+    <phone>+7 683 446 39 24</phone>
+    <position>Старший специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>15</person_id>
+    <full_name>Максимильян Иосифович Павлов</full_name>
+    <phone>+7 523 139 06 43</phone>
+    <position>Старший специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>16</person_id>
+    <full_name>Фролов Глеб Бориславович</full_name>
+    <phone>+7 880 759 46 87</phone>
+    <position>Старший специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>17</person_id>
+    <full_name>Фортунат Ефремович Веселов</full_name>
+    <phone>8 (216) 236-77-97</phone>
+    <position>Специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>18</person_id>
+    <full_name>Васильев Матвей Ааронович</full_name>
+    <phone>87540760416</phone>
+    <position>Специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>19</person_id>
+    <full_name>Белов Марк Ярославович</full_name>
+    <phone>8 659 083 7191</phone>
+    <position>Специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>20</person_id>
+    <full_name>Максим Харламович Якушев</full_name>
+    <phone>8 (478) 175-0848</phone>
+    <position>Специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>21</person_id>
+    <full_name>Евфросиния Юльевна Мамонтова</full_name>
+    <phone>+7 (116) 206-92-17</phone>
+    <position>Специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>22</person_id>
+    <full_name>Панкрат Валерьянович Киселев</full_name>
+    <phone>8 423 170 73 98</phone>
+    <position>Специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>23</person_id>
+    <full_name>Попова Валентина Станиславовна</full_name>
+    <phone>8 (948) 153-38-10</phone>
+    <position>Специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>24</person_id>
+    <full_name>Алина Вячеславовна Потапова</full_name>
+    <phone>+7 (690) 256-8182</phone>
+    <position>Директор</position>
+    <department>IT support</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Helpdesk</responsibility>
+      <responsibility>Выдать новый компьютер</responsibility>
+      <responsibility>Не работает компьютер</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>25</person_id>
+    <full_name>Рожков Остап Денисович</full_name>
+    <phone>+72235355844</phone>
+    <position>Начальник отдела</position>
+    <department>IT support</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Helpdesk</responsibility>
+      <responsibility>Выдать новый компьютер</responsibility>
+      <responsibility>Не работает компьютер</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>26</person_id>
+    <full_name>Исакова Синклитикия Аркадьевна</full_name>
+    <phone>+7 487 115 05 76</phone>
+    <position>Старший специалист</position>
+    <department>IT support</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Helpdesk</responsibility>
+      <responsibility>Выдать новый компьютер</responsibility>
+      <responsibility>Не работает компьютер</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>27</person_id>
+    <full_name>Вера Даниловна Логинова</full_name>
+    <phone>+7 395 268 09 91</phone>
+    <position>Старший специалист</position>
+    <department>IT support</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Helpdesk</responsibility>
+      <responsibility>Выдать новый компьютер</responsibility>
+      <responsibility>Не работает компьютер</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>28</person_id>
+    <full_name>Максимова Кира Павловна</full_name>
+    <phone>87632400145</phone>
+    <position>Специалист</position>
+    <department>IT support</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Helpdesk</responsibility>
+      <responsibility>Выдать новый компьютер</responsibility>
+      <responsibility>Не работает компьютер</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>29</person_id>
+    <full_name>Евпраксия Аркадьевна Морозова</full_name>
+    <phone>+7 580 206 0333</phone>
+    <position>Специалист</position>
+    <department>IT support</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Helpdesk</responsibility>
+      <responsibility>Выдать новый компьютер</responsibility>
+      <responsibility>Не работает компьютер</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>30</person_id>
+    <full_name>Шарапова Пелагея Рубеновна</full_name>
+    <phone>+71812317961</phone>
+    <position>Директор</position>
+    <department>Финансы</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Бюджет</responsibility>
+      <responsibility>Финансовое планирование</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>31</person_id>
+    <full_name>Христофор Димитриевич Якушев</full_name>
+    <phone>8 (941) 158-0848</phone>
+    <position>Начальник отдела</position>
+    <department>Финансы</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Бюджет</responsibility>
+      <responsibility>Финансовое планирование</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>32</person_id>
+    <full_name>Беляков Герман Ильясович</full_name>
+    <phone>8 565 974 6595</phone>
+    <position>Старший специалист</position>
+    <department>Финансы</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Бюджет</responsibility>
+      <responsibility>Финансовое планирование</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>33</person_id>
+    <full_name>Богданова Алина Кузьминична</full_name>
+    <phone>83219142286</phone>
+    <position>Старший специалист</position>
+    <department>Финансы</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Бюджет</responsibility>
+      <responsibility>Финансовое планирование</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>34</person_id>
+    <full_name>Пестов Ярополк Устинович</full_name>
+    <phone>8 829 600 4281</phone>
+    <position>Старший специалист</position>
+    <department>Финансы</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Бюджет</responsibility>
+      <responsibility>Финансовое планирование</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>35</person_id>
+    <full_name>Пономарева Агафья Леонидовна</full_name>
+    <phone>88540243043</phone>
+    <position>Старший специалист</position>
+    <department>Финансы</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Бюджет</responsibility>
+      <responsibility>Финансовое планирование</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>36</person_id>
+    <full_name>Роман Гордеевич Тетерин</full_name>
+    <phone>83402765680</phone>
+    <position>Старший специалист</position>
+    <department>Финансы</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Бюджет</responsibility>
+      <responsibility>Финансовое планирование</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>37</person_id>
+    <full_name>Голубев Потап Устинович</full_name>
+    <phone>+7 (331) 084-40-52</phone>
+    <position>Специалист</position>
+    <department>Финансы</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Бюджет</responsibility>
+      <responsibility>Финансовое планирование</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>38</person_id>
+    <full_name>Надежда Григорьевна Наумова</full_name>
+    <phone>8 (617) 502-1842</phone>
+    <position>Специалист</position>
+    <department>Финансы</department>
+    <location>Москва</location>
+    <responsibilities>
+      <responsibility>Бюджет</responsibility>
+      <responsibility>Финансовое планирование</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>39</person_id>
+    <full_name>Туров Святополк Викентьевич</full_name>
+    <phone>8 354 661 3449</phone>
+    <position>Директор</position>
+    <department>Столовая</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Питание сотрудников</responsibility>
+      <responsibility>Завтраки</responsibility>
+      <responsibility>Обеды</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>40</person_id>
+    <full_name>Кузьмин Евграф Гаврилович</full_name>
+    <phone>8 (757) 628-98-16</phone>
+    <position>Начальник отдела</position>
+    <department>Столовая</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Питание сотрудников</responsibility>
+      <responsibility>Завтраки</responsibility>
+      <responsibility>Обеды</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>41</person_id>
+    <full_name>Ираида Святославовна Степанова</full_name>
+    <phone>+7 197 227 97 13</phone>
+    <position>Начальник отдела</position>
+    <department>Столовая</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Питание сотрудников</responsibility>
+      <responsibility>Завтраки</responsibility>
+      <responsibility>Обеды</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>42</person_id>
+    <full_name>Марина Михайловна Калашникова</full_name>
+    <phone>8 381 473 0642</phone>
+    <position>Старший специалист</position>
+    <department>Столовая</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Питание сотрудников</responsibility>
+      <responsibility>Завтраки</responsibility>
+      <responsibility>Обеды</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>43</person_id>
+    <full_name>Исаков Владислав Эдгарович</full_name>
+    <phone>8 132 511 07 37</phone>
+    <position>Старший специалист</position>
+    <department>Столовая</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Питание сотрудников</responsibility>
+      <responsibility>Завтраки</responsibility>
+      <responsibility>Обеды</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>44</person_id>
+    <full_name>Кузьмин Федосий Брониславович</full_name>
+    <phone>+7 (870) 260-96-54</phone>
+    <position>Старший специалист</position>
+    <department>Столовая</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Питание сотрудников</responsibility>
+      <responsibility>Завтраки</responsibility>
+      <responsibility>Обеды</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>45</person_id>
+    <full_name>Брагин Ермолай Харитонович</full_name>
+    <phone>+78288166315</phone>
+    <position>Специалист</position>
+    <department>Столовая</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Питание сотрудников</responsibility>
+      <responsibility>Завтраки</responsibility>
+      <responsibility>Обеды</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>46</person_id>
+    <full_name>Анжела Николаевна Кошелева</full_name>
+    <phone>+70624570558</phone>
+    <position>Специалист</position>
+    <department>Столовая</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Питание сотрудников</responsibility>
+      <responsibility>Завтраки</responsibility>
+      <responsibility>Обеды</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>47</person_id>
+    <full_name>Климент Ермилович Сидоров</full_name>
+    <phone>8 (199) 809-35-20</phone>
+    <position>Директор</position>
+    <department>Бухгалтерия</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>48</person_id>
+    <full_name>Надежда Александровна Жданова</full_name>
+    <phone>+7 (453) 618-2836</phone>
+    <position>Начальник отдела</position>
+    <department>Бухгалтерия</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>49</person_id>
+    <full_name>Панов Ярополк Аксёнович</full_name>
+    <phone>+7 410 028 92 96</phone>
+    <position>Начальник отдела</position>
+    <department>Бухгалтерия</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>50</person_id>
+    <full_name>Гусев Роман Эдуардович</full_name>
+    <phone>+7 383 520 6946</phone>
+    <position>Старший специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>51</person_id>
+    <full_name>Нонна Константиновна Денисова</full_name>
+    <phone>81153394898</phone>
+    <position>Старший специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>52</person_id>
+    <full_name>Игнатьев Александр Артурович</full_name>
+    <phone>+7 704 684 74 56</phone>
+    <position>Старший специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>53</person_id>
+    <full_name>Екатерина Руслановна Колобова</full_name>
+    <phone>+74279741857</phone>
+    <position>Старший специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>54</person_id>
+    <full_name>Данилова Евдокия Романовна</full_name>
+    <phone>+7 033 880 53 16</phone>
+    <position>Старший специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>55</person_id>
+    <full_name>Тамара Матвеевна Никитина</full_name>
+    <phone>8 (592) 052-3134</phone>
+    <position>Специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>56</person_id>
+    <full_name>Меркушев Никон Ааронович</full_name>
+    <phone>8 849 206 83 75</phone>
+    <position>Специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>57</person_id>
+    <full_name>Маргарита Григорьевна Павлова</full_name>
+    <phone>+7 (194) 040-5397</phone>
+    <position>Специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>58</person_id>
+    <full_name>Вышеслав Ануфриевич Орехов</full_name>
+    <phone>+78766574542</phone>
+    <position>Специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>59</person_id>
+    <full_name>Доронин Милован Владиленович</full_name>
+    <phone>8 (853) 935-51-97</phone>
+    <position>Специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>60</person_id>
+    <full_name>Стрелков Елизар Григорьевич</full_name>
+    <phone>80080158879</phone>
+    <position>Специалист</position>
+    <department>Бухгалтерия</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Заработная плата</responsibility>
+      <responsibility>Отпускные</responsibility>
+      <responsibility>Авансовый отчет</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>61</person_id>
+    <full_name>Селиверстова Екатерина Антоновна</full_name>
+    <phone>+7 314 874 96 03</phone>
+    <position>Директор</position>
+    <department>IT support</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Helpdesk</responsibility>
+      <responsibility>Выдать новый компьютер</responsibility>
+      <responsibility>Не работает компьютер</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>62</person_id>
+    <full_name>Егоров Наум Ерофеевич</full_name>
+    <phone>8 815 630 21 27</phone>
+    <position>Начальник отдела</position>
+    <department>IT support</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Helpdesk</responsibility>
+      <responsibility>Выдать новый компьютер</responsibility>
+      <responsibility>Не работает компьютер</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>63</person_id>
+    <full_name>Алина Натановна Овчинникова</full_name>
+    <phone>+7 879 746 41 93</phone>
+    <position>Начальник отдела</position>
+    <department>IT support</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Helpdesk</responsibility>
+      <responsibility>Выдать новый компьютер</responsibility>
+      <responsibility>Не работает компьютер</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>64</person_id>
+    <full_name>Венедикт Филимонович Сергеев</full_name>
+    <phone>8 597 658 0772</phone>
+    <position>Старший специалист</position>
+    <department>IT support</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Helpdesk</responsibility>
+      <responsibility>Выдать новый компьютер</responsibility>
+      <responsibility>Не работает компьютер</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>65</person_id>
+    <full_name>Евдокия Яковлевна Абрамова</full_name>
+    <phone>+70322623973</phone>
+    <position>Старший специалист</position>
+    <department>IT support</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Helpdesk</responsibility>
+      <responsibility>Выдать новый компьютер</responsibility>
+      <responsibility>Не работает компьютер</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>66</person_id>
+    <full_name>Соколова Раиса Михайловна</full_name>
+    <phone>+7 399 470 3133</phone>
+    <position>Старший специалист</position>
+    <department>IT support</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Helpdesk</responsibility>
+      <responsibility>Выдать новый компьютер</responsibility>
+      <responsibility>Не работает компьютер</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>67</person_id>
+    <full_name>Элеонора Ефимовна Корнилова</full_name>
+    <phone>+7 (514) 060-84-42</phone>
+    <position>Старший специалист</position>
+    <department>IT support</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Helpdesk</responsibility>
+      <responsibility>Выдать новый компьютер</responsibility>
+      <responsibility>Не работает компьютер</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>68</person_id>
+    <full_name>Пономарев Моисей Демидович</full_name>
+    <phone>8 838 708 5558</phone>
+    <position>Специалист</position>
+    <department>IT support</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Helpdesk</responsibility>
+      <responsibility>Выдать новый компьютер</responsibility>
+      <responsibility>Не работает компьютер</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>69</person_id>
+    <full_name>Голубева Алевтина Тимофеевна</full_name>
+    <phone>+7 (378) 674-5897</phone>
+    <position>Специалист</position>
+    <department>IT support</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Helpdesk</responsibility>
+      <responsibility>Выдать новый компьютер</responsibility>
+      <responsibility>Не работает компьютер</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>70</person_id>
+    <full_name>Зыков Макар Эдгардович</full_name>
+    <phone>+7 594 073 81 71</phone>
+    <position>Специалист</position>
+    <department>IT support</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Helpdesk</responsibility>
+      <responsibility>Выдать новый компьютер</responsibility>
+      <responsibility>Не работает компьютер</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>71</person_id>
+    <full_name>Яковлев Любосмысл Адамович</full_name>
+    <phone>8 720 983 99 68</phone>
+    <position>Специалист</position>
+    <department>IT support</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Helpdesk</responsibility>
+      <responsibility>Выдать новый компьютер</responsibility>
+      <responsibility>Не работает компьютер</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>72</person_id>
+    <full_name>Аристарх Германович Колесников</full_name>
+    <phone>+7 (522) 851-79-74</phone>
+    <position>Специалист</position>
+    <department>IT support</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Helpdesk</responsibility>
+      <responsibility>Выдать новый компьютер</responsibility>
+      <responsibility>Не работает компьютер</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>73</person_id>
+    <full_name>Кузнецов Сергей Ефимьевич</full_name>
+    <phone>8 580 188 1268</phone>
+    <position>Специалист</position>
+    <department>IT support</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Helpdesk</responsibility>
+      <responsibility>Выдать новый компьютер</responsibility>
+      <responsibility>Не работает компьютер</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>74</person_id>
+    <full_name>Майя Михайловна Коновалова</full_name>
+    <phone>8 935 295 50 95</phone>
+    <position>Специалист</position>
+    <department>IT support</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Helpdesk</responsibility>
+      <responsibility>Выдать новый компьютер</responsibility>
+      <responsibility>Не работает компьютер</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>75</person_id>
+    <full_name>Ираклий Иосипович Дементьев</full_name>
+    <phone>8 (312) 035-1047</phone>
+    <position>Директор</position>
+    <department>Финансы</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Бюджет</responsibility>
+      <responsibility>Финансовое планирование</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>76</person_id>
+    <full_name>Клавдия Георгиевна Смирнова</full_name>
+    <phone>+73079725324</phone>
+    <position>Начальник отдела</position>
+    <department>Финансы</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Бюджет</responsibility>
+      <responsibility>Финансовое планирование</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>77</person_id>
+    <full_name>Яковлева Эмилия Ильинична</full_name>
+    <phone>8 914 822 52 48</phone>
+    <position>Начальник отдела</position>
+    <department>Финансы</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Бюджет</responsibility>
+      <responsibility>Финансовое планирование</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>78</person_id>
+    <full_name>Олимпий Жоресович Кулаков</full_name>
+    <phone>+7 017 127 44 11</phone>
+    <position>Старший специалист</position>
+    <department>Финансы</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Бюджет</responsibility>
+      <responsibility>Финансовое планирование</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>79</person_id>
+    <full_name>Тимофеева Лора Анатольевна</full_name>
+    <phone>8 (793) 254-08-00</phone>
+    <position>Старший специалист</position>
+    <department>Финансы</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Бюджет</responsibility>
+      <responsibility>Финансовое планирование</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>80</person_id>
+    <full_name>Овчинников Валерьян Афанасьевич</full_name>
+    <phone>+7 669 897 5969</phone>
+    <position>Старший специалист</position>
+    <department>Финансы</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Бюджет</responsibility>
+      <responsibility>Финансовое планирование</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>81</person_id>
+    <full_name>Василиса Максимовна Кириллова</full_name>
+    <phone>+7 (675) 098-7648</phone>
+    <position>Старший специалист</position>
+    <department>Финансы</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Бюджет</responsibility>
+      <responsibility>Финансовое планирование</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>82</person_id>
+    <full_name>Соболева Антонина Кузьминична</full_name>
+    <phone>8 463 984 6196</phone>
+    <position>Специалист</position>
+    <department>Финансы</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Бюджет</responsibility>
+      <responsibility>Финансовое планирование</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>83</person_id>
+    <full_name>Афанасьев Фадей Бенедиктович</full_name>
+    <phone>8 555 367 2442</phone>
+    <position>Специалист</position>
+    <department>Финансы</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Бюджет</responsibility>
+      <responsibility>Финансовое планирование</responsibility>
+    </responsibilities>
+  </person>
+  <person>
+    <person_id>84</person_id>
+    <full_name>Агата Оскаровна Жукова</full_name>
+    <phone>8 (652) 725-0925</phone>
+    <position>Специалист</position>
+    <department>Финансы</department>
+    <location>Тамань</location>
+    <responsibilities>
+      <responsibility>Бюджет</responsibility>
+      <responsibility>Финансовое планирование</responsibility>
+    </responsibilities>
+  </person>
 </contact_list>

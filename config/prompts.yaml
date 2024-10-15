@@ -77,12 +77,27 @@ prompts:
         Using the provided context, formulate a single question that captures an important 
         fact from the context. Restrict the question to the context information provided.
         
-        The questions should be diverse in nature across the document. 
-        Avoid asking on source document properties and ID.
+        The questions should be diverse in nature across the documents.
 
-        When making a question abount person's department and position,
-        consider asking about location too.
+        Avoid asking on source document properties and ID.
+        Focus on questions of how to get particular service in some location, for example:
+
+            Whom to call about getting a new computer in Tamany?
+            Who is responsible for breakfast in Moscow?
         
         Question must use the same language as provided context.
         You should generate only question and nothing else.
+    
+    fine_tune_generator_yandex: |
+        Сформулируй по заданному контексту единственный вопрос о том,
+        как получить какой-либо сервис в какой-то локации, или об ответственности или должности 
+        конкретных лиц, например:
+
+            Кто отвечает за питание сотрудников в Тамани?
+            За что отвечает Туров Святополк Викентьевич?
+            Какую должность занимает Кузьмин Евграф Гаврилович?
+
+        Вопросы должны быть разнообразны и адресованы к разным документам или их разделам.
+        Вопросы должны быть сформированы на том же языке, что и контекст.
+        Результат должен содержать только один вопрос и ничего более.
     

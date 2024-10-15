@@ -7,7 +7,7 @@ from llama_index.readers.file import XMLReader
 from lib.get_model import get_model
 from lib.get_prompt import get_prompt
 
-llm, emded_llm = get_model('llama3.1-unsloth', 'llama3.1', temperature=0.1)
+llm, emded_llm = get_model('llama3.1', 'llama3.1', temperature=0.1)
 Settings.llm = llm
 Settings.embed_model = emded_llm
 

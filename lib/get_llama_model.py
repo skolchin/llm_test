@@ -1,4 +1,5 @@
 # sudo systemctl start ollama
+# patch required: https://github.com/langchain-ai/langchain/issues/22532
 import os
 import yaml
 from pathlib import Path
@@ -57,7 +58,7 @@ def get_model(model: str, embed: str | None = None, **kwargs) -> Tuple[LLM, Base
                 **kwargs,
             )
 
-        case 'huggingface' | 'unsloth':
+        case 'huggingface':
             import torch
             from llama_index.llms.huggingface import HuggingFaceLLM
 
@@ -99,17 +100,26 @@ def get_model(model: str, embed: str | None = None, **kwargs) -> Tuple[LLM, Base
             model = model.configure(temperature=kwargs.get('temperature', 0.6))
             llm = LangChainLLM(model.langchain())
 
-        # case 'unsloth':
-        #     from unsloth import FastLanguageModel
-        #     from llama_index.llms.huggingface import HuggingFaceLLM
+        case 'unsloth':
+            from langchain_community.llms.llamacpp import LlamaCpp
+            from llama_index.llms.langchain import LangChainLLM
 
-        #     llm, tokenizer = FastLanguageModel.from_pretrained(
-        #         model_name=model_def['model_name'],
-        #         max_seq_length=kwargs.pop('max_seq_length', model_def.get('max_seq_length', 2048)),
-        #         load_in_4bit=kwargs.pop('load_in_4bit', model_def.get('load_in_4bit', True)),
-        #         **kwargs
-        #     )
-        #     Settings.tokenizer = tokenizer
+            model = LlamaCpp(
+                model_path=model_def['model_path'],
+                n_gpu_layers=64,
+                temperature=kwargs.pop('temperature', 0.6),
+                model_kwargs={
+                    'model_name': model_def['model_name'],
+                    'max_seq_length': kwargs.pop('max_seq_length', model_def.get('max_seq_length', 2048)),
+                    'load_in_4bit': kwargs.pop('load_in_4bit', model_def.get('load_in_4bit', True)),
+                },
+                **kwargs
+            )
+            llm = LangChainLLM(model)
+
+            from transformers import AutoTokenizer
+            from llama_index.core import set_global_tokenizer
+            Settings.tokenizer = AutoTokenizer.from_pretrained(Path(model_def['model_path']).parent).encode
 
         case _:
             raise ValueError(model)
@@ -128,11 +138,19 @@ def get_model(model: str, embed: str | None = None, **kwargs) -> Tuple[LLM, Base
             emded_llm = HuggingFaceEmbedding(model_name=embed_def['model_name'], device='cuda')
 
         case 'yandex':
-            from yandex_api import get_yandex_iam_token, YandexGPTEmbeddingExt
+            from lib.yandex_api import get_yandex_iam_token, YandexGPTEmbeddingExt
             emded_llm = YandexGPTEmbeddingExt(folder_id=os.environ['YANDEX_FOLDER_ID'], api_key=get_yandex_iam_token())
+
+        case 'unsloth':
+            from langchain_community.embeddings.llamacpp import LlamaCppEmbeddings
+            from llama_index.embeddings.langchain import LangchainEmbedding
+            embed_model = LlamaCppEmbeddings(
+                model_path=embed_def['model_path'], 
+                n_gpu_layers=64,
+                device='cuda')
+            emded_llm = LangchainEmbedding(embed_model)
 
         case _:
             raise ValueError(embed)
 
     return llm, emded_llm
-

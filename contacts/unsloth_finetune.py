@@ -7,12 +7,14 @@ from datasets import Dataset
 from unsloth import FastLanguageModel
 from transformers import TrainingArguments
 from transformers import EarlyStoppingCallback
-from llama_index.readers.file import XMLReader
 from unsloth.chat_templates import get_chat_template
 
-context = XMLReader(1).load_data('./data/contacts.xml')
+max_seq_length = 512
 
-max_seq_length = 2048
+with open('./data/contacts.xml', 'rt') as fp:
+    context = fp.read()
+
+prompt_with_context = f'Answer to user question relying only on this context:\n{context}'
 
 model, tokenizer = FastLanguageModel.from_pretrained(
     model_name="unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
@@ -26,15 +28,16 @@ tokenizer = get_chat_template(
 )
 
 def formatting_prompts_func(examples):
+    sys_content = [ {'role': 'system', 'content': prompt_with_context} ] * len(examples['0'])
     texts = [tokenizer.apply_chat_template(x, tokenize=False, add_generation_prompt=False) 
-             for x in zip(examples['0'], examples['1'])]
-    return { "text" : texts, }
+             for x in zip(sys_content, examples['0'], examples['1'])]
+    return { "text" : texts }
 
 dataset = Dataset.from_json('./data/training.json')
 dataset = dataset.map(formatting_prompts_func, batched = True)
 
-doc_str = "\n".join([x['text'] + '\n' for x in random.choices(dataset, k=3)])
-print(f'Random nodes (3):\n{doc_str}')
+# doc_str = "\n".join([x['text'] + '\n' for x in random.choices(dataset, k=3)])
+# print(f'Random nodes (3):\n{doc_str}')
 
 ds_splits = dataset.train_test_split(test_size=0.2)
 print(f'Train/val length: {ds_splits["train"].num_rows}/{ds_splits["test"].num_rows}')
@@ -59,16 +62,19 @@ trainer = SFTTrainer(
     eval_dataset=ds_splits["test"],
     dataset_text_field="text",
     max_seq_length=max_seq_length,
-    dataset_num_proc=2,
-    packing=False,
+    dataset_num_proc=1,
+    packing=True,
+    eval_packing=True,
     args=TrainingArguments(
         per_device_train_batch_size=2,
+        per_device_eval_batch_size=2,
+        auto_find_batch_size=True,
         gradient_accumulation_steps=4,
         warmup_steps=5,
         max_steps=50,
         num_train_epochs=3,
         learning_rate=2e-4,
-        fp16=not torch.cuda.is_bf16_supported(),
+        fp16=False, #not torch.cuda.is_bf16_supported(),
         bf16=torch.cuda.is_bf16_supported(),
         logging_steps=1,
         optim="adamw_8bit",
@@ -86,4 +92,6 @@ trainer = SFTTrainer(
 trainer.train()
 
 model = FastLanguageModel.for_inference(model)
-model.save_pretrained('./.models/llama3.1-trained')
+model.save_pretrained('./models/llama3.1-trained')
+model.save_pretrained_gguf("./models/llama3.1-trained", tokenizer, quantization_method="quantized")
+# model.save_pretrained_merged('./models/llama3.1-trained', tokenizer, save_method="merged_16bit")

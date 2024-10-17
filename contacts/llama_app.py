@@ -16,7 +16,7 @@ from llama_index.core.retrievers import VectorIndexRetriever
 from llama_index.core.query_engine import RetrieverQueryEngine
 from llama_index.core.tools import FunctionTool, QueryEngineTool, ToolMetadata
 
-from lib.get_model import get_model, get_system_prompt, list_models, list_embedders
+from lib.get_llama_model import get_model, get_system_prompt, list_models, list_embedders
 from lib.get_prompt import get_prompt
 from rag_tools import *
 

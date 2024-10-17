@@ -1,3 +1,5 @@
+--extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cu126
+
 # common
 click
 faker
@@ -34,6 +36,7 @@ llama-index-embeddings-huggingface
 llama-index-llms-langchain
 spacy
 llama-index-finetuning
+llama-index-embeddings-langchain
 
 # Yandex GPT
 yandex-cloud-ml-sdk
@@ -46,3 +49,9 @@ trl
 peft
 accelerate
 bitsandbytes
+
+# Llama.cpp
+ggify @ git+https://github.com/akx/ggify
+# CMAKE_ARGS="-DGGML_BLAS=on -DGGML_BLAS_VENDOR=OpenBLAS -DGGML_CUDA=on" must be set, e.g.
+# > CMAKE_ARGS="-DGGML_BLAS=on -DGGML_BLAS_VENDOR=OpenBLAS -DGGML_CUDA=on" pip install 'llama-cpp-python==0.2.55'
+llama-cpp-python

@@ -7,7 +7,7 @@ from llama_index.core import VectorStoreIndex
 from llama_index.readers.file import XMLReader
 from llama_index.core.llama_dataset.generator import RagDatasetGenerator
 
-from lib.get_model import get_model
+from lib.get_llama_model import get_model
 from lib.get_prompt import get_prompt
 
 llm, emded_llm = get_model('yandex-gpt', 'baai-bge-m3', temperature=0.35)

@@ -19,9 +19,11 @@ models:
         engine: 'yandex' 
         model_name: 'yandexgpt' 
         system_prompt: 'yandex'
-    llama3.1-unsloth:
+    llama3.1-trained:
         engine: 'unsloth'
-        model_name: 'unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit' 
+        model_name: 'Meta-Llama-3.1-8B-Instruct-bnb-4bit'
+        model_path: 'models/llama3.1-trained/unsloth.BF16.gguf'
+        load_in_4bit: True
 
 embedders:
     llama3.1:
@@ -36,6 +38,13 @@ embedders:
     baai-bge-m3:
         engine: 'huggingface'
         model_name: 'BAAI/bge-m3'
-    yandex-gpt:
+    yandex-text:
         engine: 'yandex'
-        model_name: 'evilfreelancer/enbeddrus'
+        model_name: 'text-search-doc'
+    yandex-query:
+        engine: 'yandex'
+        model_name: 'text-search-query'
+    llama3.1-trained:
+        engine: 'unsloth'
+        model_name: 'Meta-Llama-3.1-8B-Instruct-bnb-4bit'
+        model_path: 'models/llama3.1-trained/unsloth.BF16.gguf'
